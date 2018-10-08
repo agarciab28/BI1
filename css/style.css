@@ -2,11 +2,70 @@ html,body{
     height: 100%;
 }
 
+body{
+  margin-top: 50px;
+  background-color: #F8F6F8;
+}
+
 @font-face {
   font-family:"Decker Bold";
   src:url("../font/product-sans/Product Sans Regular.ttf") format("truetype");
   font-weight:normal;font-style:normal;
 }
+
+#btnSearch{
+  background-color: #6E828A;
+  color: white;
+}
+
+aside{
+  float: right;
+  width: 40%;
+  height: 100%;
+  background-color: #6E828A;
+  color: white;
+  bottom: 0px;
+  position: relative;
+}
+
+#imglogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formBI{
+  margin-left: 30px;
+}
+
+.formTitle{
+  font-size: 50px;
+}
+
+.formLink{
+  margin-left: 10px;
+  font-size: 30px;
+}
+
+#linkForm{
+  color: #143952;
+}
+
+.contenido-seccion{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.texto-acerca-de{
+    background: #CDE2EC;
+    color: black;
+    padding: 1.875rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 
 
 input[type='text'], input[type='email'], input[type='password'], select {
