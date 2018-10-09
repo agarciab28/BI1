@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Registro de Usuario</title>
+    <title>Inicio de Sesion</title>
   </head>
   <body>
     <!-- Navbar -->
@@ -18,7 +18,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Item 1</a>
+                    <a class="nav-link" href="index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Item 2</a>
@@ -56,5 +56,79 @@
             </ul>
          </div>
     </nav>
+
+    <!-- lado derecho -->
+    <aside class="formulario" id="formularioIngreso">
+      <div class="formBI">
+        <div class="formTitle" style="display:inline-block;">
+          Registrate
+        </div>
+        <div class="formLink" style="display:inline-block;">
+          o <a href="ingreso.html" id="linkForm">inicia sesión</a>
+        </div>
+        <div class="form">
+          <form class="registro" action="index.html" method="post">
+            <input type="text" name="usuario" value="" id="txtUsuario" placeholder="Usuario"> <br>
+            <input type="email" name="correo" id="txtCorreo" value="" placeholder="Correo"> <br>
+            <input type="password" name="contraseña" id="txtPassword" value="" placeholder="Contraseña"> <br>
+            <input type="text" name="nombre" value="" id="txtNombre" placeholder="Nombre"> <br>
+            <input type="text" name="apellidos" value="" id="txtApellidos" placeholder="Apellidos"> <br>
+            <input type="text" name="fechaNac" id="txtFechaNac" value="" placeholder="Fecha de Nacimiento" onfocus="(this.type='date')" onblur="(this.type='text')"> <br>
+            <select class="" name="nivelEstudios" id="txtNivelEstudios" placeholder="Nivel de Estudios">
+              <option value="null">Nivel de Estudios</option>
+              <option value="Secundaria">Secundaria</option>
+              <option value="Bachillerato">Bachillerato</option>
+              <option value="Licenciatura">Licenciatura</option>
+              <option value="Postgrado">Postgrado</option>
+            </select>
+            <input type="text" name="ciudad" id="txtCiudad" value="" placeholder="Ciudad"> <br>
+            <input type="text" name="curp" value="" id="txtCurp" placeholder="CURP  "> <br>
+            <input type="submit" name="submit" id="btnRegistro" value="Registrate">
+          </form>
+        </div>
+      </div>
+    </aside>
+
+        <!-- lado izquierdo -->
+        <!-- <div class="izq">
+
+          <!-- <div class="contenido-seccion">
+              <div class="container">
+                  <div class="col-md-6">
+                      <div class="texto-acerca-de">
+                          <h3>Mision</h3>
+                          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                  </div>
+              </div>
+          </div> -->
+        <!-- </div>  -->
+
+        <!-- Cover -->
+    <section id="cover-registro" class="cover">
+        <div id="cover-texto">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                            <div class="texto-acerca-de">
+                            <img src="img/logo/BI1logo.jpg" alt="" id="imglogo">
+                            <h1 class="display-3">Unete a nosotros</h1>
+                            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
   </body>
+
+  <!-- Scripts -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+
 </html>

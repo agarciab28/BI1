@@ -9,14 +9,27 @@ body{
   text-align: justify;
 }
 
-#cover{
-    background: #222 url("../img/study.jpg") no-repeat;
-    background-size: cover;
+.cover{
+
     color: white;
     height: 100%;
     display: flex;
     align-items: center;
+}
 
+#cover-ingreso{
+    background: #222 url("../img/study.jpg") no-repeat;
+    background-size: cover;
+}
+
+#cover-registro{
+    background: #222 url("../img/register.jpg") no-repeat;
+    background-size: cover;
+}
+
+#cover-registro-pro{
+    background: #222 url("../img/proffesor.jpg") no-repeat;
+    background-size: cover;
 }
 
 @font-face {
@@ -76,11 +89,12 @@ aside{
     padding: 1.875rem;
     text-align: justify;
     text-justify: inter-word;
+    height: 100%;
 }
 
 
 
-input[type='text'], input[type='email'], input[type='password'] {
+input[type='text'], input[type='email'], input[type='password'], input[type='date'], select, textarea {
   width: 200px;
   border-radius: 8px;
   border: 3px solid #143952;
@@ -99,15 +113,20 @@ input[type='submit']{
   font-size: 20px;
   border: 1px solid #143952;
   border-radius: 2px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   cursor:pointer;}
 
 input[type='submit']:hover {
   background-color: #143F52;
 }
 
-#btnSubmit{
+#btnIngreso{
   margin-top: 100px;
+  width: 90%;
+}
+
+#btnRegistro{
+  margin-top: 10px;
   width: 90%;
 }
 
