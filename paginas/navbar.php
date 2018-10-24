@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/navbar.css">
-  <link rel="stylesheet" href="css/footer.css">
   <title>Inicio</title>
 </head>
 
@@ -23,8 +22,8 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Inicio</a>
+        <li class="nav-item">
+          <a class="nav-link" href="index.php">Inicio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Item 2</a>
@@ -142,128 +141,4 @@
       </div>
     </div>
   </div>
-
-  <!-- Carrusel -->
-  <div id="carrusel">
-    <div id="carrusel-home" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carrusel-home" data-slide-to="0" class="active"></li>
-        <li data-target="#carrusel-home" data-slide-to="1"></li>
-        <li data-target="#carrusel-home" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active ad1">
-          <div class="carousel-caption">
-            <div class="texto-cover">
-              <h3 style="text-align:center">Noticia 1</h3>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item ad2">
-          <div class="carousel-caption">
-            <div class="texto-cover">
-              <h3 style="text-align:center">Noticia 2</h3>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item ad3">
-          <div class="carousel-caption">
-            <div class="texto-cover">
-              <h3 style="text-align:center">Noticia 3</h3>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carrusel-home" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Anterior</span>
-      </a>
-      <a class="carousel-control-next" href="#carrusel-home" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Siguiente</span>
-      </a>
-    </div>
-  </div>
-
-  <div class="cursosDestacados">
-    <h3 class="title">Cursos destacados</h3>
-
-    <div class="card">
-      <img class="card-img-top" src="img/proffesor.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Titulo del curso</h5>
-        <p class="card-text">Ejemplo de descripcion del curso</p>
-        <a href="profesor.html" class="card-link" style="color:#143952">Profesor</a>
-      </div>
-    </div>
-
-
-    <div class="card">
-      <img class="card-img-top" src="img/proffesor.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Titulo del curso</h5>
-        <p class="card-text">Ejemplo de descripcion del curso</p>
-        <a href="profesor.html" class="card-link" style="color:#143952">Profesor</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top" src="img/proffesor.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Titulo del curso</h5>
-        <p class="card-text">Ejemplo de descripcion del curso</p>
-        <a href="profesor.html" class="card-link" style="color:#143952">Profesor</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top" src="img/proffesor.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Titulo del curso</h5>
-        <p class="card-text">Ejemplo de descripcion del curso</p>
-        <a href="profesor.html" class="card-link" style="color:#143952">Profesor</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top" src="img/proffesor.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Titulo del curso</h5>
-        <p class="card-text">Ejemplo de descripcion del curso</p>
-        <a href="profesor.html" class="card-link" style="color:#143952">Profesor</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer id="myFooter">
-    <div class="container">
-      <ul>
-        <li><a href="#">Item 1</a></li>
-        <li><a href="#">Item 2</a></li>
-        <li><a href="#">Item 3</a></li>
-        <li><a href="#">Item 4</a></li>
-      </ul>
-      <p class="footer-copyright">© 2018 Belleza Interior</p>
-    </div>
-    <div class="footer-social">
-      <a href="http://www.facebook.com" target="_blank" class="social-icons"><i class="fa fa-facebook"></i></a>
-      <a href="http://www.instagram.com" target="_blank" class="social-icons"><i class="fa fa-instagram"></i></a>
-      <a href="http://www.twitter.com" target="_blank" class="social-icons"><i class="fa fa-twitter"></i></a>
-    </div>
-  </footer>
-  <!--/.footer-->
-
-
 </body>
-<!-- Scripts -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-
-</html>
