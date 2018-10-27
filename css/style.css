@@ -94,6 +94,14 @@ body {
   color: white;
 }
 
+.jumbotron{
+  width: 50%;
+  margin-left: 15em;
+  margin-top:5em;
+  background-color: #143952;
+  color: white;
+}
+
 #imglogo {
   display: block;
   margin: auto;

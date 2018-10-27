@@ -13,7 +13,7 @@
 <body>
 <?php
   require_once 'paginas/navbar.php';
-  require_once 'paginas/sidemenu.php';
+  require_once 'paginas/menu_profesor.php';
   require_once 'paginas/footer.php';
  ?>
 
