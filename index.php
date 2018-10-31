@@ -64,10 +64,12 @@
     </div>
   </div>
 
+  <!-- cursos Destacados -->
+
   <div class="cursosDestacados">
     <h3 class="title">Cursos Destacados</h3>
 
-    <div class="card" onclick="(window.open('../BI1/index.php', '_self'))">
+    <div class="card" onclick="(window.open('../index.php', '_self'))">
       <img class="card-img-top" src="img/proffesor.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>
@@ -77,7 +79,7 @@
     </div>
 
 
-    <div class="card" onclick="(window.open('../BI1/index.php', '_self'))">
+    <div class="card" onclick="(window.open('../index.php', '_self'))">
       <img class="card-img-top" src="img/proffesor.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>
@@ -86,7 +88,7 @@
       </div>
     </div>
 
-    <div class="card" onclick="(window.open('../BI1/index.php', '_self'))">
+    <div class="card" onclick="(window.open('../index.php', '_self'))">
       <img class="card-img-top" src="img/proffesor.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>
@@ -95,7 +97,7 @@
       </div>
     </div>
 
-    <div class="card" onclick="(window.open('../BI1/index.php', '_self'))">
+    <div class="card" onclick="(window.open('../index.php', '_self'))">
       <img class="card-img-top" src="img/proffesor.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>
@@ -104,7 +106,7 @@
       </div>
     </div>
 
-    <div class="card" onclick="(window.open('../BI1/index.php', '_self'))">
+    <div class="card" onclick="(window.open('../index.php', '_self'))">
       <img class="card-img-top" src="img/proffesor.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>
