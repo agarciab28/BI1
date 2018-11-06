@@ -101,7 +101,7 @@ Website: http://www.allphptricks.com/
 											<input type="text" name="apellido" placeholder="Apellido" required /> <br>
 											<input type="email" name="email" placeholder="Email" required /> <br>
 											<input type="password" name="password" placeholder="Password" required /> <br><br>
-											<input type="submit" name="submit" value="Registrar" /> <br>
+											<input type="submit" name="submit" value="RegistrarRR" /> <br>
 									</form>
 									<br /><br />
 								</div>
