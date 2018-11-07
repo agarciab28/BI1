@@ -21,7 +21,11 @@ if ($row = mysqli_fetch_array($sql)) {
 	$_SESSION['usuario'] = $usuario;
 	header("Location: ../perfil.php");
 }
-
-
+$sql2= mysqli_query($con,"SELECT * FROM info_profesionista where usuario = '$usuario' and clave='$pass'");
+if ($row = mysqli_fetch_array($sql2)) {
+	session_start();
+	$_SESSION['usuario'] = $usuario;
+	header("Location: ../paginas/menu_profesor.php");
+}
 
  ?>
