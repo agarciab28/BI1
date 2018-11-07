@@ -93,22 +93,22 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <form class="login" action="index.html" method="post">
-            <input type="text" name="txtNombre" value="" placeholder="Nombre">
-            <input type="text" name="txtApellidos" value="" placeholder="Apellidos">
-            <input type="text" name="txtUsuario" value="" placeholder="Usuario">
-            <input type="email" name="txtCorreo" value="" placeholder="Correo electronico">
-            <input type="password" name="txtPassword" value="" placeholder="Contraseña">
-            <input type="text" name="txtFechaNac" value="" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Fecha de Nacimiento">
-            <select class="" name="txtNivelEst">
+          <form class="login" action="paginas/registro.php" method="post">
+            <input type="text" name="txtNombre" id="txtNombre" value="" placeholder="Nombre">
+            <input type="text" name="txtApellidos" id=txtApellidos value="" placeholder="Apellidos">
+            <input type="text" name="txtUsuario" id="txtUsuario" value="" placeholder="Usuario">
+            <input type="email" name="txtCorreo" id="txtCorreo" value="" placeholder="Correo electronico">
+            <input type="password" name="txtPassword" id="txtPassword" value="" placeholder="Contraseña">
+            <input type="text" name="txtFechaNac" id="txtFechaNac" value="" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Fecha de Nacimiento">
+            <select class="" name="txtNivelEst" id="txtNivelEst">
               <option value="null">Nivel de Estudios</option>
               <option value="secundaria">Secundaria</option>
               <option value="bachillerato">Bachillerato</option>
               <option value="licenciatura">Licenciatura</option>
               <option value="postgrado">Postgrado</option>
             </select>
-            <input type="text" name="txtCiudad" value="" placeholder="Ciudad">
-            <input type="text" name="txtCurp" value="" placeholder="CURP">
+            <input type="text" name="txtCiudad" id="txtCiudad" value="" placeholder="Ciudad">
+            <input type="text" name="txtCurp" id="txtCurp" value="" placeholder="CURP">
             <input type="submit" name="btnIniciar" value="Registrate">
           </form>
         </div>
