@@ -1,3 +1,4 @@
+  <!--Inicio de la pagina-->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -73,9 +74,9 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <form class="login" action="index.html" method="post">
-            <input type="text" name="txtUsuario" value="" placeholder="Usuario">
-            <input type="password" name="txtPassword" value="" placeholder="Contraseña">
+          <form class="login" action="paginas/validar.php" method="post">
+            <input type="text" name="txtUsuario" id="txtUsuario" value="" placeholder="Usuario">
+            <input type="password" name="txtPassword" id="txtPassword" value="" placeholder="Contraseña">
             <input type="submit" name="btnIniciar" value="Iniciar Sesión">
           </form>
         </div>
