@@ -7,7 +7,7 @@
   $apellidos=$_POST["txtApellidos"];
   $usuario=$_POST["txtUsuario"];
   $correoElectronico=$_POST["txtCorreo"];
-  $pass=$_POST["txtPassword"];
+  $pass = md5($_POST["txtPassword"]);//este codigo encripta la contraseña con el estandar md5
   $fechaNacimiento=$_POST["txtFechaNac"];
   $estudios=$_POST["txtNivelEst"];
   $ciudad=$_POST["txtCiudad"];
@@ -18,6 +18,8 @@
 
   if ($sql) {
     header("Location: ../index.php");
+    $message = "Registro exitoso";
+    echo "<script type='text/javascript'>alert('$message');</script>";
   }
 
   else {
