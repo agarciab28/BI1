@@ -1,12 +1,13 @@
+
 <?php 
 //Codigo para la validacion de usuario y contraseña
 $db='proyis';
 $con=mysqli_connect('localhost','rootis','123456',$db) or die('Problema con la conexion');
-
+$c=0;
 
 //Variables del usuario
 $usuario=$_POST['txtUsuario'];
-$pass=$_POST['txtPassword'];
+$pass=md5($_POST['txtPassword']);
 //Validar contenido en las variables o cajas de texto
 if(empty($usuario)|empty($pass))
 {
@@ -15,7 +16,11 @@ if(empty($usuario)|empty($pass))
 }
 //Validacion Existencia del usuario
 $sql = mysqli_query($con,"SELECT * FROM info_usuario where usuario = '$usuario' and clave='$pass'");
+<<<<<<< Updated upstream
 	//echo mysqli_error($con);
+=======
+//echo mysqli_error($con);
+>>>>>>> Stashed changes
 if ($row = mysqli_fetch_array($sql)) {
 	session_start();
 	$_SESSION['usuario'] = $usuario;
