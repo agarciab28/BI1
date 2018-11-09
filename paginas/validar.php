@@ -15,11 +15,7 @@ if(empty($usuario)|empty($pass))
 }
 //Validacion Existencia del usuario
 $sql = mysqli_query($con,"SELECT * FROM info_usuario where usuario = '$usuario' and clave='$pass'");
-<<<<<<< Updated upstream
-	//echo mysqli_error($con);
-=======
-//echo mysqli_error($con);
->>>>>>> Stashed changes
+
 if ($row = mysqli_fetch_array($sql)) {
 	session_start();
 	$_SESSION['usuario'] = $usuario;
