@@ -125,17 +125,17 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <form class="login" action="index.html" method="post">
-            <input type="text" name="txtNombre" value="" placeholder="Nombre">
-            <input type="text" name="txtApellidos" value="" placeholder="Apellidos">
-            <input type="text" name="txtUsuario" value="" placeholder="Usuario">
-            <input type="email" name="txtCorreo" value="" placeholder="Correo electronico">
-            <input type="password" name="txtPassword" value="" placeholder="Contraseña">
-            <input type="text" name="txtFechaNac" value="" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Fecha de Nacimiento">
-            <input type="text" name="txtCiudad" value="" placeholder="Ciudad">
-            <input type="text" name="txtCurp" value="" placeholder="CURP">
-            <input type="text" name="txtRFC" value="" placeholder="RFC">
-            <textarea name="txtCurriculum" rows="5" placeholder="Ingresa tu curriculum"></textarea>
+          <form class="login" action="paginas/registroprof.php" method="post">
+            <input type="text" name="txtNombreProf" id="txtNombreProf" value="" placeholder="Nombre">
+            <input type="text" name="txtApellidosProf" id="txtApellidosProf" value="" placeholder="Apellidos">
+            <input type="text" name="txtUsuarioProf" id="txtUsuarioProf" value="" placeholder="Usuario">
+            <input type="email" name="txtCorreoProf" id="txtCorreoProf" value="" placeholder="Correo electronico">
+            <input type="password" name="txtPasswordProf" id="txtPasswordProf" value="" placeholder="Contraseña">
+            <input type="text" name="txtFechaNacProf" id="txtFechaNacProf" value="" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Fecha de Nacimiento">
+            <input type="text" name="txtCiudadProf" id="txtCiudadProf" value="" placeholder="Ciudad">
+            <input type="text" name="txtCurpProf" id="txtCurpProf" value="" placeholder="CURP">
+            <input type="text" name="txtRFCProf" id="txtRfcProf" value="" placeholder="RFC">
+            <textarea name="txtCurriculumProf" id="txtCurriculumProf" rows="5" placeholder="Ingresa tu curriculum"></textarea>
             <input type="submit" name="btnIniciar" value="Registrate">
           </form>
         </div>
