@@ -1,4 +1,4 @@
-<?php 
+<?php
 //Codigo para la validacion de usuario y contraseña
 $db='proyis';
 $con=mysqli_connect('localhost','rootis','123456',$db) or die('Problema con la conexion');
@@ -6,7 +6,7 @@ $con=mysqli_connect('localhost','rootis','123456',$db) or die('Problema con la c
 
 //Variables del usuario
 $usuario=$_POST['txtUsuario'];
-$pass=$_POST['txtPassword'];
+$pass=md5($_POST['txtPassword']);
 //Validar contenido en las variables o cajas de texto
 if(empty($usuario)|empty($pass))
 {
