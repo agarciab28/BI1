@@ -1,4 +1,5 @@
 <?php 
+$c=0;
 //Codigo para la validacion de usuario y contraseña
 $db='proyis';
 $con=mysqli_connect('localhost','rootis','123456',$db) or die('Problema con la conexion');
@@ -15,17 +16,29 @@ if(empty($usuario)|empty($pass))
 }
 //Validacion Existencia del usuario
 $sql = mysqli_query($con,"SELECT * FROM info_usuario where usuario = '$usuario' and clave='$pass'");
-	//echo mysqli_error($con);
+echo mysqli_error($con);
 if ($row = mysqli_fetch_array($sql)) {
 	session_start();
 	$_SESSION['usuario'] = $usuario;
 	header("Location: ../perfil.php");
+	$c=1;
 }
+else
+{
+	echo "<script>alert('Usuario o contraseña incorrectas')</script>";
+	echo"<a href='../index.php'>Volver</a>";
+	$c=1;
+}
+//Validacion Existencia del Profesionista
 $sql2= mysqli_query($con,"SELECT * FROM info_profesionista where usuario = '$usuario' and clave='$pass'");
 if ($row = mysqli_fetch_array($sql2)) {
 	session_start();
 	$_SESSION['usuario'] = $usuario;
 	header("Location: ../paginas/menu_profesor.php");
 }
-
+else if($c==0 ){
+echo "<script>alert('Usuario o contraseña incorrectas')</script>";
+echo"<a href='..index.php'>Volver</a>";
+}
  ?>
+
