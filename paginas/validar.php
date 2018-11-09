@@ -1,4 +1,3 @@
-
 <?php 
 //Codigo para la validacion de usuario y contraseña
 $db='proyis';
