@@ -1,5 +1,7 @@
 <?php 
-//Pagina de prueba para inicio de sesion
+/**
+*Pagina de prueba para inicio de sesion
+*/
 session_start();
 if(isset($_SESSION['usuario'])){
 	echo"";
