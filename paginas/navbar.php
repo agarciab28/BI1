@@ -85,7 +85,7 @@
             <div class="tab-content">
               <div role="tabpanel" class="tab-pane active" id="userTab">
                 Inicio de Sesión de Usuario
-                <form class="login" action="paginas/validar.php" method="post">
+                <form class="login" action="../db/validar.php" method="post">
                   <input type="text" name="txtUsuario" id="txtUsuario" value="" placeholder="Usuario">
                   <input type="password" name="txtPassword" id="txtPassword" value="" placeholder="Contraseña">
                   <input type="submit" name="btnIniciar" value="Iniciar Sesión">
@@ -93,7 +93,7 @@
               </div>
               <div role="tabpanel" class="tab-pane" id="proTab">
                 Inicio de Sesión de Profesionista
-                <form class="login" action="paginas/validar.php" method="post">
+                <form class="login" action="../db/validar.php" method="post">
                   <input type="text" name="txtUsuario" id="txtUsuario" value="" placeholder="Usuario">
                   <input type="password" name="txtPassword" id="txtPassword" value="" placeholder="Contraseña">
                   <input type="submit" name="btnIniciar" value="Iniciar Sesión">
@@ -118,7 +118,7 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <form class="login" action="paginas/registro.php" method="post">
+          <form class="login" action="../db/registro.php" method="post">
             <input type="text" name="txtNombre" id="txtNombre" value="" placeholder="Nombre">
             <input type="text" name="txtApellidos" id=txtApellidos value="" placeholder="Apellidos">
             <input type="text" name="txtUsuario" id="txtUsuario" value="" placeholder="Usuario">
@@ -150,7 +150,7 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <form class="login" action="paginas/registroprof.php" method="post">
+          <form class="login" action="../db/registroprof.php" method="post">
             <input type="text" name="txtNombreProf" id="txtNombreProf" value="" placeholder="Nombre">
             <input type="text" name="txtApellidosProf" id="txtApellidosProf" value="" placeholder="Apellidos">
             <input type="text" name="txtUsuarioProf" id="txtUsuarioProf" value="" placeholder="Usuario">

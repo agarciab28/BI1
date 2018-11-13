@@ -32,7 +32,7 @@ $sql2= mysqli_query($con,"SELECT * FROM info_profesionista where usuario = '$usu
 if ($row = mysqli_fetch_array($sql2)) {
 	session_start();
 	$_SESSION['usuario'] = $usuario;
-	header("Location: ../paginas/menu_profesor.php");
+	header("Location: ../profesor.php");
 }
 else if($c==0 ){
 echo "<script>alert('Usuario o contraseña incorrectas')</script>";
