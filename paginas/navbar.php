@@ -74,36 +74,11 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <div role="tabpanel">
-            <!-- Tabs Navbar -->
-            <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active"><a href="#userTab" class="tab-name" aria-controls="userTab" role="tab" data-toggle="tab" aria-expanded="true">Usuario</a></li>
-              <li role="presentation"><a href="#proTab" class="tab-name" aria-controls="proTab" role="tab" data-toggle="tab" aria-expanded="false">Profesionista</a></li>
-            </ul>
-
-            <!-- Contenido Tabs -->
-            <div class="tab-content">
-              <div role="tabpanel" class="tab-pane active" id="userTab">
-                Inicio de Sesión de Usuario
-                <form class="login" action="../db/validar.php" method="post">
+                <form class="login" action="../BI1/db/validar.php" method="post">
                   <input type="text" name="txtUsuario" id="txtUsuario" value="" placeholder="Usuario">
                   <input type="password" name="txtPassword" id="txtPassword" value="" placeholder="Contraseña">
                   <input type="submit" name="btnIniciar" value="Iniciar Sesión">
                 </form>
-              </div>
-              <div role="tabpanel" class="tab-pane" id="proTab">
-                Inicio de Sesión de Profesionista
-                <form class="login" action="../db/validar.php" method="post">
-                  <input type="text" name="txtUsuario" id="txtUsuario" value="" placeholder="Usuario">
-                  <input type="password" name="txtPassword" id="txtPassword" value="" placeholder="Contraseña">
-                  <input type="submit" name="btnIniciar" value="Iniciar Sesión">
-                </form>
-              </div>
-            </div>
-          </div>
-
-
-
         </div>
       </div>
     </div>
@@ -118,7 +93,7 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <form class="login" action="../db/registro.php" method="post">
+          <form class="login" action="../BI1/db/registro.php" method="post">
             <input type="text" name="txtNombre" id="txtNombre" value="" placeholder="Nombre">
             <input type="text" name="txtApellidos" id=txtApellidos value="" placeholder="Apellidos">
             <input type="text" name="txtUsuario" id="txtUsuario" value="" placeholder="Usuario">
@@ -150,7 +125,7 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <form class="login" action="../db/registroprof.php" method="post">
+          <form class="login" action="../BI1/db/registroprof.php" method="post">
             <input type="text" name="txtNombreProf" id="txtNombreProf" value="" placeholder="Nombre">
             <input type="text" name="txtApellidosProf" id="txtApellidosProf" value="" placeholder="Apellidos">
             <input type="text" name="txtUsuarioProf" id="txtUsuarioProf" value="" placeholder="Usuario">
