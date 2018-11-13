@@ -94,6 +94,19 @@ body {
   color: white;
 }
 
+.tab-name, .tab-name:hover{
+  color: white;
+  margin-right: 2em;
+}
+
+.tab-name:active{
+  color: #6E828A;
+}
+
+.tab-pane{
+  margin-top: 1em;
+}
+
 .jumbotron{
   width: 50%;
   margin-left: 15em;
