@@ -1,4 +1,4 @@
-<?php 
+<?php
 //Codigo para la validacion de usuario y contraseña
 $db='proyis';
 $con=mysqli_connect('localhost','rootis','123456',$db) or die('Problema con la conexion');
@@ -6,7 +6,7 @@ $c=0;
 
 //Variables del usuario
 $usuario=$_POST['txtUsuario'];
-$pass=$_POST['txtPassword'];
+$pass=md5($_POST['txtPassword']);
 //Validar contenido en las variables o cajas de texto
 if(empty($usuario)|empty($pass))
 {
@@ -21,21 +21,21 @@ if ($row = mysqli_fetch_array($sql)) {
 	$_SESSION['usuario'] = $usuario;
 	header("Location: ../perfil.php");
 }
-else 
-{ 
-	echo "<script>alert('Usuario o contraseña incorrectas')</script>"; 
-	echo"<a href='../index.php'>Volver</a>"; 
-	$c=1; 
-} 
+else
+{
+	echo "<script>alert('Usuario o contraseña incorrectas')</script>";
+	echo"<a href='../index.php'>Volver</a>";
+	$c=1;
+}
 //Validacion Profesionista
 $sql2= mysqli_query($con,"SELECT * FROM info_profesionista where usuario = '$usuario' and clave='$pass'");
 if ($row = mysqli_fetch_array($sql2)) {
 	session_start();
 	$_SESSION['usuario'] = $usuario;
-	header("Location: ../paginas/menu_profesor.php");
+	header("Location: ../profesor.php");
 }
-else if($c==0 ){ 
-echo "<script>alert('Usuario o contraseña incorrectas')</script>"; 
-echo"<a href='..index.php'>Volver</a>"; 
-} 
+else if($c==0 ){
+echo "<script>alert('Usuario o contraseña incorrectas')</script>";
+echo"<a href='..index.php'>Volver</a>";
+}
  ?>

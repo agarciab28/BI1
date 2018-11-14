@@ -66,19 +66,19 @@
   </nav>
 
   <!-- Pantalla de inicio de sesion -->
-  <div class="modal fade" role="dialog" id="loginModal">
+  <div class="modal fade" role="dialog" id="loginModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h3 class="modal-title">Inicia Sesión</h3>
+          <h3 class="modal-title" id="myModalLabel">Inicia Sesión</h3>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <form class="login" action="paginas/validar.php" method="post">
-            <input type="text" name="txtUsuario" id="txtUsuario" value="" placeholder="Usuario">
-            <input type="password" name="txtPassword" id="txtPassword" value="" placeholder="Contraseña">
-            <input type="submit" name="btnIniciar" value="Iniciar Sesión">
-          </form>
+                <form class="login" action="../BI1/db/validar.php" method="post">
+                  <input type="text" name="txtUsuario" id="txtUsuario" value="" placeholder="Usuario">
+                  <input type="password" name="txtPassword" id="txtPassword" value="" placeholder="Contraseña">
+                  <input type="submit" name="btnIniciar" value="Iniciar Sesión">
+                </form>
         </div>
       </div>
     </div>
@@ -93,7 +93,7 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <form class="login" action="paginas/registro.php" method="post">
+          <form class="login" action="../BI1/db/registro.php" method="post">
             <input type="text" name="txtNombre" id="txtNombre" value="" placeholder="Nombre">
             <input type="text" name="txtApellidos" id=txtApellidos value="" placeholder="Apellidos">
             <input type="text" name="txtUsuario" id="txtUsuario" value="" placeholder="Usuario">
@@ -125,7 +125,7 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <form class="login" action="paginas/registroprof.php" method="post">
+          <form class="login" action="../BI1/db/registroprof.php" method="post">
             <input type="text" name="txtNombreProf" id="txtNombreProf" value="" placeholder="Nombre">
             <input type="text" name="txtApellidosProf" id="txtApellidosProf" value="" placeholder="Apellidos">
             <input type="text" name="txtUsuarioProf" id="txtUsuarioProf" value="" placeholder="Usuario">
