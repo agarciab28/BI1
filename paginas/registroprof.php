@@ -1,9 +1,18 @@
 <?php
+/**
+*@file registroprof.php
+*@Author MiguelMR
+*@brief Código para el registro de profesores
+*/
 
-//Conexión a la base de datos
+/**
+*@brief Conexión a la base de datos
+*/
  $conn = mysqli_connect("localhost:3307","rootis","123456", "proyis");
 
-//Variables de los campos
+/**
+Variables para almacenar los valores de los campos del formulario
+*/
 $nombre = $_POST["txtNombreProf"];
 $apellidos = $_POST["txtApellidosProf"];
 $usuario = $_POST["txtUsuarioProf"];
@@ -15,10 +24,16 @@ $curp = $_POST["txtCurpProf"];
 $rfc = $_POST["txtRFCProf"];
 $curriculum = $_POST["txtCurriculumProf"];
 
-//Query para la base de datos
+/**
+Instrucción para la inserción de la información en la base de datos
+*/
 $insertar = "INSERT INTO info_profesionista VALUES ('$usuario', '$clave', '$nombre', '$apellidos', '$correo', '$fechanac', '', '$ciudad', '$curp', '', '$curriculum', '$rfc')";
 
-//Ejecución de la consulta
+/**
+*@brief Ejecución de la instrucción
+*@param Variable del query
+*@return 0 si hay error, 1 si la ejecución es exitosa
+*/
 $resultado = mysqli_query($conn, $insertar);
 if(!$resultado){
 	echo "Error al registrarse";
@@ -26,5 +41,7 @@ if(!$resultado){
 	echo "Registro exitoso";
 }
 
-//Cerrar conexión
+/**
+Cerrar conexión de la base de datos
+*/
 mysqli_close($conn);
