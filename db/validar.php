@@ -20,6 +20,7 @@ if ($row = mysqli_fetch_array($sql)) {
 	session_start();
 	$_SESSION['usuario'] = $usuario;
 	header("Location: ../perfil.php");
+	$c=1;
 }
 else
 {
