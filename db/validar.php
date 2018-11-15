@@ -19,7 +19,12 @@ $sql = mysqli_query($con,"SELECT * FROM info_usuario where usuario = '$usuario' 
 if ($row = mysqli_fetch_array($sql)) {
 	session_start();
 	$_SESSION['usuario'] = $usuario;
+<<<<<<< HEAD
 	header("Location: ../index.php");
+=======
+	header("Location: ../perfil.php");
+	$c=1;
+>>>>>>> gh-pages
 }
 else
 {
