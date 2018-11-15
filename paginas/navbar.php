@@ -55,6 +55,10 @@
         <li class="nav-item">
           <a href="#" class="nav-link" data-toggle="modal" data-target="#registerModal">Registrarse</a>
         </li>
+
+        <li class="nav-item">
+          <a href="../BI1/db/logout.php" class="nav-link" >Cerrar Sesion</a>
+        </li>
       </ul>
     </div>
     <!-- <div id="navbar-menu-right-side"> -->
@@ -66,7 +70,7 @@
   </nav>
 
   <!-- Pantalla de inicio de sesion -->
-  <div class="modal fade" role="dialog" id="loginModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal fade" role="dialog" id="loginModal">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -96,9 +100,9 @@
           <form class="login" action="../BI1/db/registro.php" method="post">
             <input type="text" name="txtNombre" id="txtNombre" value="" placeholder="Nombre">
             <input type="text" name="txtApellidos" id=txtApellidos value="" placeholder="Apellidos">
-            <input type="text" name="txtUsuario" id="txtUsuario" value="" placeholder="Usuario">
+            <input type="text" name="txtUsuarioReg" id="txtUsuarioReg" value="" placeholder="Usuario">
             <input type="email" name="txtCorreo" id="txtCorreo" value="" placeholder="Correo electronico">
-            <input type="password" name="txtPassword" id="txtPassword" value="" placeholder="Contraseña">
+            <input type="password" name="txtPasswordReg" id="txtPasswordReg" value="" placeholder="Contraseña">
             <input type="text" name="txtFechaNac" id="txtFechaNac" value="" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Fecha de Nacimiento">
             <select class="" name="txtNivelEst" id="txtNivelEst">
               <option value="null">Nivel de Estudios</option>

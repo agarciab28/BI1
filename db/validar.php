@@ -19,7 +19,7 @@ $sql = mysqli_query($con,"SELECT * FROM info_usuario where usuario = '$usuario' 
 if ($row = mysqli_fetch_array($sql)) {
 	session_start();
 	$_SESSION['usuario'] = $usuario;
-	header("Location: ../perfil.php");
+	header("Location: ../index.php");
 }
 else
 {
@@ -27,12 +27,15 @@ else
 	echo"<a href='../index.php'>Volver</a>";
 	$c=1;
 }
+
 //Validacion Profesionista
 $sql2= mysqli_query($con,"SELECT * FROM info_profesionista where usuario = '$usuario' and clave='$pass'");
 if ($row = mysqli_fetch_array($sql2)) {
 	session_start();
+	echo $usuario;
+	echo $pass;
 	$_SESSION['usuario'] = $usuario;
-	header("Location: ../profesor.php");
+ header("Location: ../prueba.php");
 }
 else if($c==0 ){
 echo "<script>alert('Usuario o contraseña incorrectas')</script>";

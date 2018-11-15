@@ -12,9 +12,9 @@
   */
   $nombre=$_POST["txtNombre"];
   $apellidos=$_POST["txtApellidos"];
-  $usuario=$_POST["txtUsuario"];
+  $usuario=$_POST["txtUsuarioReg"];
   $correoElectronico=$_POST["txtCorreo"];
-  $pass = md5($_POST["txtPassword"]);//este codigo encripta la contraseña con el estandar md5
+  $pass = md5($_POST["txtPasswordReg"]);//este codigo encripta la contraseña con el estandar md5
   $fechaNacimiento=$_POST["txtFechaNac"];
   $estudios=$_POST["txtNivelEst"];
   $ciudad=$_POST["txtCiudad"];

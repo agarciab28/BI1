@@ -47,7 +47,7 @@
         </form>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link">Cerrar Sesion</a>
+        <a href="../BI1/db/logout.php" class="nav-link">Cerrar Sesion</a>
       </li>
     </ul>
   </div>

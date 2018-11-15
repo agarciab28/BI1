@@ -1,3 +1,6 @@
+<?php
+  include("db/auth.php");
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -23,4 +26,3 @@
 <script src="js/bootstrap.min.js"></script>
 
 </html>
- 
