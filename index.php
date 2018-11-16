@@ -13,7 +13,18 @@
 <body>
 
 <?php
-  require_once 'paginas/navbar.php';
+session_start();
+if(isset($_SESSION["usuario"])){
+  require 'paginas/navbar_inicio.php';
+}
+else if (isset($_SESSION["profesionista"])) {
+  require 'paginas/navbar_profesionista.php';
+}
+
+else {
+  require 'paginas/navbar.php';
+}
+
  ?>
 
   <!-- Carrusel -->

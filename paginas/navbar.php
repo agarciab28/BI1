@@ -55,9 +55,8 @@
         <li class="nav-item">
           <a href="#" class="nav-link" data-toggle="modal" data-target="#registerModal">Registrarse</a>
         </li>
-
         <li class="nav-item">
-          <a href="../BI1/db/logout.php" class="nav-link" >Cerrar Sesion</a>
+          <a href="../BI1/access_all.html" class="nav-link">Pruebas</a>
         </li>
       </ul>
     </div>

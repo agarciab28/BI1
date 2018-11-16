@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
   <div class="container-fluid h-100">
       <div class="row h-100">
           <aside class="col-12 col-md-2 p-0" style="background-color:#6E828A;">
@@ -31,7 +32,7 @@
               </nav>
           </aside>
           <main class="col">
-            <div class="jumbotron">
+            <div class="jumbotron" id="jumbo_prof">
                 <h1 class="display-4">Curriculum</h1>
                 <p class="lead">Ejemplo del contenido del curriculum
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

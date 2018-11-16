@@ -26,11 +26,8 @@
   $sql = mysqli_query($con,"INSERT INTO info_usuario VALUES ('$usuario', '$pass', '$nombre', '$apellidos', '$correoElectronico', '$fechaNacimiento', '$estudios', '$ciudad', '$curp', 1)");
 
   if ($sql) {
-    /**
-    *notificacion de registro exitoso
-    */
-    $message = "Registro exitoso";
-    echo "<script type='text/javascript'>alert('$message');document.location='../index.php'</script>";
+    // Manda al usuario a una pagina de confirmacion de registro
+    header("Location: ../registro_exitoso_u.php")
 
 
   }

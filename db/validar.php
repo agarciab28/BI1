@@ -24,7 +24,7 @@ if ($row = mysqli_fetch_array($sql)) {
 else
 {
 	echo "<script>alert('Usuario o contraseña incorrectas')</script>";
-	echo"<a href='../index.php'>Volver</a>";
+	header("Location: ../index.php");
 	$c=1;
 }
 
@@ -34,11 +34,11 @@ if ($row = mysqli_fetch_array($sql2)) {
 	session_start();
 	echo $usuario;
 	echo $pass;
-	$_SESSION['usuario'] = $usuario;
- header("Location: ../prueba.php");
+	$_SESSION['profesionista'] = $usuario;
+ header("Location: ../index.php");
 }
 else if($c==0 ){
 echo "<script>alert('Usuario o contraseña incorrectas')</script>";
-echo"<a href='..index.php'>Volver</a>";
+header("Location: ../index.php");
 }
  ?>

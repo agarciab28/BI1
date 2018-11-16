@@ -9,7 +9,7 @@
 /**
 *@brief Conexión a la base de datos
 */
- $conn = mysqli_connect("localhost:3307","rootis","123456", "proyis");
+ $conn = mysqli_connect("localhost","rootis","123456", "proyis");
 
 /**
 Variables para almacenar los valores de los campos del formulario
@@ -18,7 +18,7 @@ $nombre = $_POST["txtNombreProf"];
 $apellidos = $_POST["txtApellidosProf"];
 $usuario = $_POST["txtUsuarioProf"];
 $correo = $_POST["txtCorreoProf"];
-$clave = $_POST["txtPasswordProf"];
+$clave = md5($_POST["txtPasswordProf"]);
 $fechanac = $_POST["txtFechaNacProf"];
 $ciudad = $_POST["txtCiudadProf"];
 $curp = $_POST["txtCurpProf"];
@@ -28,7 +28,7 @@ $curriculum = $_POST["txtCurriculumProf"];
 /**
 Instrucción para la inserción de la información en la base de datos
 */
-$insertar = "INSERT INTO info_profesionista VALUES ('$usuario', '$clave', '$nombre', '$apellidos', '$correo', '$fechanac', '', '$ciudad', '$curp', '', '$curriculum', '$rfc')";
+$insertar = "INSERT INTO info_profesionista VALUES ('$usuario', '$clave', '$nombre', '$apellidos', '$correo', '$fechanac', '', '$ciudad', '$curp', '1', '$curriculum', '$rfc')";
 
 /**
 *@brief Ejecución de la instrucción
@@ -38,8 +38,9 @@ $insertar = "INSERT INTO info_profesionista VALUES ('$usuario', '$clave', '$nomb
 $resultado = mysqli_query($conn, $insertar);
 if(!$resultado){
 	echo "Error al registrarse";
+  echo mysqli_error($conn);
 }else{
-	echo "Registro exitoso";
+	header("Location: ../registro_exitoso_p.php")
 }
 
 /**
