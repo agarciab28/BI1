@@ -19,7 +19,10 @@ $sql = mysqli_query($con,"SELECT * FROM info_usuario where usuario = '$usuario' 
 if ($row = mysqli_fetch_array($sql)) {
 	session_start();
 	$_SESSION['usuario'] = $usuario;
-	header("Location: ../index.php");
+	$_SESSION['id']=$row['perfil'];
+	header("Location: ../perfil.php");
+	$c=1;
+
 }
 else
 {
