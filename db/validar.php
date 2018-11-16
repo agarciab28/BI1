@@ -35,8 +35,6 @@ else
 $sql2= mysqli_query($con,"SELECT * FROM info_profesionista where usuario = '$usuario' and clave='$pass'");
 if ($row = mysqli_fetch_array($sql2)) {
 	session_start();
-	echo $usuario;
-	echo $pass;
 	$_SESSION['profesionista'] = $usuario;
  header("Location: ../index.php");
 }
