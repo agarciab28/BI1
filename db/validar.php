@@ -20,7 +20,7 @@ if ($row = mysqli_fetch_array($sql)) {
 	session_start();
 	$_SESSION['usuario'] = $usuario;
 	$_SESSION['id']=$row['perfil'];
-	header("Location: ../perfil.php");
+	header("Location: ../index.php");
 	$c=1;
 
 }

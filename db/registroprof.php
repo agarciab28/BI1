@@ -28,7 +28,7 @@ $curriculum = $_POST["txtCurriculumProf"];
 /**
 Instrucción para la inserción de la información en la base de datos
 */
-$insertar = "INSERT INTO info_profesionista VALUES ('$usuario', '$clave', '$nombre', '$apellidos', '$correo', '$fechanac', '', '$ciudad', '$curp', '1', '$curriculum', '$rfc')";
+$insertar = "INSERT INTO info_profesionista VALUES ('$usuario', '$clave', '$nombre', '$apellidos', '$correo', '$fechanac', '', '$ciudad', '$curp', DEFAULT, '$curriculum', '$rfc')";
 
 /**
 *@brief Ejecución de la instrucción
@@ -40,7 +40,7 @@ if(!$resultado){
 	echo "Error al registrarse";
   echo mysqli_error($conn);
 }else{
-	header("Location: ../registro_exitoso_p.php")
+	header("Location: ../registro_exitoso_p.php");
 }
 
 /**
