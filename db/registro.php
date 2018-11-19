@@ -27,7 +27,7 @@
 
   if ($sql) {
     // Manda al usuario a una pagina de confirmacion de registro
-    header("Location: ../registro_exitoso_u.php")
+    header("Location: ../registro_exitoso_u.php");
 
 
   }

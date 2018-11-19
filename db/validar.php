@@ -19,15 +19,18 @@ $sql = mysqli_query($con,"SELECT * FROM info_usuario where usuario = '$usuario' 
 if ($row = mysqli_fetch_array($sql)) {
 	session_start();
 	$_SESSION['usuario'] = $usuario;
+<<<<<<< Updated upstream
 	$_SESSION['id']=$row['perfil'];
+=======
+>>>>>>> Stashed changes
 	header("Location: ../index.php");
 	$c=1;
 
 }
 else
 {
-	echo "<script>alert('Usuario o contraseña incorrectas')</script>";
-	header("Location: ../index.php");
+	echo "<script>alert('Usuario o contraseña incorrectas'); window.location = '../index.php'</script>";
+	// header("Location: ../index.php");
 	$c=1;
 }
 
@@ -39,7 +42,7 @@ if ($row = mysqli_fetch_array($sql2)) {
  header("Location: ../index.php");
 }
 else if($c==0 ){
-echo "<script>alert('Usuario o contraseña incorrectas')</script>";
-header("Location: ../index.php");
+echo "<script>alert('Usuario o contraseña incorrectas'); window.location = '../index.php'</script>";
+// header("Location: ../index.php");
 }
  ?>
