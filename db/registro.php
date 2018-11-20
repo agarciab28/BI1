@@ -1,6 +1,8 @@
 <?php
 /**
-*codigo para el registro de un usuario
+*@file registro.php
+*@Author Osvaldo SZ
+*@brief Código para el registro de un usuario
 */
   /**
   *coneccion con la base de datos
