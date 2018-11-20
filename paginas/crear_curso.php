@@ -5,7 +5,7 @@
     <title></title>
   </head>
   <body>
-    <form class="" action="../db/crear_curso.php" method="POST">
+    <form class="" action="../db/crear_curso.php" method="post">
       <label for="titulo">Titulo del curso</label>
       <input type="text" id="titulo" name="titulo">
       <br>
