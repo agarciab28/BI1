@@ -41,7 +41,7 @@
         <a class="nav-link" href="#">Item 4</a>
       </li>
       <li>
-        <form class="form-inline my-2 my-lg-0"  action="../../BI1/db/buscador.php" method="post">
+        <form class="form-inline my-2 my-lg-0" action="../../BI1/resultados.php" method="post" >
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="buscar" id="buscar">
           <button id="btnSearch" class="btn" type="submit">Search</button>
         </form>
