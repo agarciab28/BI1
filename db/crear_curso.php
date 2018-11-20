@@ -19,7 +19,7 @@
   /**
   *Inserccion a la base de datos del curso creado por el profesor
   */
-  $sql = mysqli_query($con,"INSERT INTO cursos ('titulo', 'descripcion', 'profesionista', 'categoria') VALUES ('$curso', '$descripcion', '$usuario', '$categoria')");
+  $sql = mysqli_query($con,"INSERT INTO cursos VALUES ('$curso', '$descripcion', '$usuario', '$categoria')");
 //INSERT INTO `cursos` (`id_curso`, `titulo`, `descripcion`, `profesionista`, `categoria`) VALUES (NULL, 'lider 101', 'como ser un lider en 10 pasos', 'ozz', '1');
   if ($sql) {
     /**
