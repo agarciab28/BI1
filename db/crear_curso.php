@@ -16,11 +16,12 @@
   $descripcion=$_POST["descripcion"];
   $usuario=$_POST["usuario"];
   $categoria=$_POST["categoria"];
+
   /**
   *Inserccion a la base de datos del curso creado por el profesor
+  *Con consulta para sacar el id de la categoria del curso con el nombre del curso con la variable $categoria
   */
-  $sql = mysqli_query($con,"INSERT INTO cursos VALUES ('$curso', '$descripcion', '$usuario', '$categoria')");
-//INSERT INTO `cursos` (`id_curso`, `titulo`, `descripcion`, `profesionista`, `categoria`) VALUES (NULL, 'lider 101', 'como ser un lider en 10 pasos', 'ozz', '1');
+  $sql = mysqli_query($con,"INSERT INTO cursos VALUES (NULL,'$curso', '$descripcion', '$usuario', (SELECT id_categoria FROM categorias_cursos WHERE descripcion='$categoria'))");
   if ($sql) {
     /**
     * Manda al usuario a una pagina de confirmacion de la creacion del curso
@@ -35,7 +36,7 @@
     /**
     *notificacion de registro fallido
     */
-    $message = "Creacion de curso no exitosa";
+    $message = mysqli_error($sql);
     echo "<script type='text/javascript'>alert('$message');document.location='../paginas/crear_curso.php'</script>";
 
   }

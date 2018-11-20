@@ -16,7 +16,7 @@
       <input type="text" id="usuario" name="usuario">
       <br>
       <label for="categoria">categoria</label>
-      <input type="number" id="categoria" name="categoria">
+      <input type="text" id="categoria" name="categoria">
       <br>
       <input type="submit" value="SUBIR">
     </form>

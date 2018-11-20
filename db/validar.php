@@ -19,7 +19,7 @@ $sql = mysqli_query($con,"SELECT * FROM info_usuario where usuario = '$usuario' 
 if ($row = mysqli_fetch_array($sql)) {
 	session_start();
 	$_SESSION['usuario'] = $usuario;
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
 	$_SESSION['id']=$row['perfil'];
 =======
 >>>>>>> Stashed changes
