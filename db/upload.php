@@ -1,10 +1,10 @@
 <?php
 
-
+include ("conexion.php");
 
   if( isset ($_POST['subir'])){
 
-    include ("conexion.php");
+
 
     $usuario=$_POST['usuario'];
     $curso=$_POST['curso'];
@@ -26,11 +26,13 @@
     *extrae los bytes del archivo
     */
     $video= file_get_contents($folder.'/'.$nombre);
+
     /**
     *Inserccion a la base de datos del curso creado por el profesor
     *Con consulta para sacar el id de la categoria del curso con el nombre del curso con la variable $categoria
     */
-    $sql = mysqli_query($con,"INSERT INTO entrada_curso VALUES (NULL,'$usuario', (SELECT id_curso FROM cursos WHERE titulo='$curso'), '$tituloVideo', '$descripcion', '$video')");
+
+    $sql = mysqli_query($con,"INSERT INTO entrada_curso VALUES (NULL,'$usuario', (SELECT id_curso FROM cursos WHERE titulo='$curso'), '$tituloVideo', '$descripcion', $video)");
 
     if ($sql) {
       /**
@@ -46,8 +48,9 @@
       /**
       *notificacion de registro fallido
       */
-      $message ="Error al creara el curso";
-      echo "<script type='text/javascript'>alert('$message');document.location='../upload.php'</script>";
+      //$message ="Error al creara el curso";
+      //echo "<script type='text/javascript'>alert('$message');document.location='../upload.php'</script>";
+      echo mysqli_error($con);
 
     }
   }

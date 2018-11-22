@@ -9,10 +9,10 @@
       <label for="usuario">Usuario</label>
       <input type="usuario" id="usuario" name="usuario">
       <br>
-      <label for="curso">Curso</label>
+      <label for="curso">Nombre del Curso</label>
       <input type="text" id="curso" name="curso">
       <br>
-      <label for="titulo">Titulo</label>
+      <label for="titulo">Titulo del video</label>
       <input type="text" id="titulo" name="titulo">
       <br>
       <label for="descripcion">descripcion</label>
