@@ -5,10 +5,9 @@
 *@brief Código para el registro de un usuario
 */
   /**
-  *coneccion con la base de datos
+  *inclulle la coneccion
   */
-  $db="proyis";
-  $con=mysqli_connect("localhost","rootis","123456",$db) or die("conexion fallida");
+  include ('conexion.php');
   /**
   *adquisicion de todos los campos
   */
@@ -36,7 +35,7 @@
     /**
     *notificacion de registro fallido
     */
-    $message = mysqli_error($sql);
+    $message = "Error al crear curso";
     echo "<script type='text/javascript'>alert('$message');document.location='../paginas/crear_curso.php'</script>";
 
   }
