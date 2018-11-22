@@ -1,0 +1,42 @@
+.formCurso{
+  width: 406px;
+    max-width: 406px;
+    margin:0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.curso{
+  align-items: center;
+  padding: 0px 25px 25px;
+    background: #fff;
+    box-shadow:
+        0px 0px 0px 5px rgba( 255,255,255,0.4 ),
+        0px 4px 20px rgba( 0,0,0,0.33 );
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    display: table;
+    position: static;
+}
+
+.input_curso, .subir{
+  /* margin-top: 1em; */
+  width: 100%;
+}
+
+.subir{
+  margin-top: 1em;
+    padding: 5px 10px;
+    background: #143952;
+    color:#fff;
+    border:0px solid #fff;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.subir:hover{
+    color:#fff;
+    cursor: pointer;
+    background: #143F52;
+}

@@ -50,7 +50,8 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION["profesionista"] ?></a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Mi Cuenta</a>
-          <a class="dropdown-item" href="#">Mis Cursos</a>
+          <a class="dropdown-item" href="../BI1/cursos_profe.php">Mis Cursos</a>
+          <a class="dropdown-item" href="../BI1/crear_curso.php">Crear Curso</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="db/logout.php">Cerrar Sesion</a>
         </div>
