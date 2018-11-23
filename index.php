@@ -80,7 +80,7 @@ else {
   <div class="cursosDestacados">
     <h3 class="title">Cursos Destacados</h3>
 
-    <div class="card" onclick="(window.open('../index.php', '_self'))">
+    <div class="card" id="cardDestacados" onclick="(window.open('../index.php', '_self'))">
       <img class="card-img-top" src="https://via.placeholder.com/1920x1080.png/064242/fff" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>
@@ -90,7 +90,7 @@ else {
     </div>
 
 
-    <div class="card" onclick="(window.open('../index.php', '_self'))">
+    <div class="card" id="cardDestacados" onclick="(window.open('../index.php', '_self'))">
       <img class="card-img-top" src="https://via.placeholder.com/1920x1080.png/cb7fc7/fff" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>
@@ -99,7 +99,7 @@ else {
       </div>
     </div>
 
-    <div class="card" onclick="(window.open('../index.php', '_self'))">
+    <div class="card" id="cardDestacados" onclick="(window.open('../index.php', '_self'))">
       <img class="card-img-top" src="https://via.placeholder.com/1920x1080.png/ff3300/fff" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>
@@ -108,7 +108,7 @@ else {
       </div>
     </div>
 
-    <div class="card" onclick="(window.open('../index.php', '_self'))">
+    <div class="card" id="cardDestacados" onclick="(window.open('../index.php', '_self'))">
       <img class="card-img-top" src="https://via.placeholder.com/1920x1080.png/99ff99/fff" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>
@@ -117,7 +117,7 @@ else {
       </div>
     </div>
 
-    <div class="card" onclick="(window.open('../index.php', '_self'))">
+    <div class="card" id="cardDestacados" onclick="(window.open('../index.php', '_self'))">
       <img class="card-img-top" src="https://via.placeholder.com/1920x1080.png/e085c2/fff" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>

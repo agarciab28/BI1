@@ -8,7 +8,7 @@ body {
   /* background-color: #F8F6F8; */
   background-color: white;
   text-align: justify;
-} 
+}
 
 .cover {
   color: white;
@@ -63,11 +63,11 @@ body {
   display: block;
 }
 
-.cursosDestacados {
+.cursosDestacados, .mis_cursos {
   align-items: center;
 }
 
-.card {
+#cardDestacados {
   margin: 12px;
   width: 18rem;
   display: inline-block;
@@ -75,9 +75,17 @@ body {
   color: white;
 }
 
-.card:hover{
+#cardDestacados:hover{
   box-shadow: 0 4px 100px 0 rgba(0, 0, 0, 0.70), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   cursor: pointer;
+}
+
+#cardCurso{
+  margin: 12px;
+  width: 18rem;
+  display: inline-block;
+  background-color: #6E828A;
+  color: white;
 }
 
 .card-link:hover{
@@ -158,16 +166,15 @@ body {
 }
 
 input[type='text'], input[type='email'], input[type='password'], input[type='date'], select, textarea {
-  width: 200px;
+  width: 100%;
   border-radius: 8px;
   border: 3px solid #143952;
   padding: 10px;
   margin-right: 20px;
   color: #333;
-  width: 90%;
   font-size: 14px;
-  /* margin-top: 5px;
-  margin-bottom: 5px; */
+  margin: auto;
+  margin-top: 1em;
 }
 
 input[type='submit'] {
