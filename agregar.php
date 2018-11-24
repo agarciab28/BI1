@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_crear_curso.css">
+    <title></title>
+  </head>
+  <body>
+    <?php
+      require 'db/auth_p.php';
+      require 'paginas/navbar_profesionista.php';
+      $id_curso=$_POST['id_curso'];
+      $profesionista=$_SESSION['profesionista'];
+    ?>
+
+    <div class="formCurso">
+      <form class="curso" action="db/crear_curso.php" method="post" enctype="multipart/form-data">
+        <label for="image_upload" class="subir">Eligir Video</label>
+        <input type='file' id="video_upload" name="video_upload" accept="video/mp4, video/x-m4v, video/*" style="display:none"/>
+        <input class="input_curso" type="text" name="titulo_entrada" id="titulo_entrada" value="" placeholder="Título">
+        <textarea class="input_curso" name="descripcion_entrada" id="descripcion_entrada" rows="8" cols="80" placeholder="Descripción de la entrada"></textarea>
+        <input class="input_curso" type="submit" name="" value="Agregar Entrada">
+      </form>
+    </div>
+  <?php
+    require 'paginas/footer.php';
+  ?>
+
+  </body>
+  <!-- Scripts -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</html>

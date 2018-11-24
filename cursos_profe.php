@@ -31,13 +31,16 @@
           <div class="card-body">
             <h5 class="card-title"> <?php echo $record['titulo']; ?></h5>
             <p class="card-text"> <?php echo $record['descripcion']; ?></p>
-            <form class="" action="" method="post" style="display: inline-block;">
+            <form class="" action="db/eliminar_curso.php" method="post" style="display: inline-block;">
+              <input type="text" id="id_curso" name="id_curso" value="<?php echo $record['id_curso'] ?>" style="display:none;">
               <input type="submit" name="" value="Eliminar" style="background-color:#143952; width:250px;">
             </form>
             <form class="" action="" method="post" style="display: inline-block;">
+              <input type="text" id="id_curso" name="id_curso" value="<?php echo $record['id_curso'] ?>" style="display:none;">
               <input type="submit" name="" value="Modificar" style="background-color:#143952; width:121px;">
             </form>
-            <form class="" action="" method="post" style="display: inline-block;">
+            <form class="" action="agregar.php" method="post" style="display: inline-block;">
+              <input type="text" id="id_curso" name="id_curso" value="<?php echo $record['id_curso'] ?>" style="display:none;">
               <input type="submit" name="" value="Agregar" style="background-color:#143952; width:121px;">
             </form>
           </div>
