@@ -81,7 +81,7 @@ else {
     <h3 class="title">Cursos Destacados</h3>
 
     <div class="card" id="cardDestacados" onclick="(window.open('../index.php', '_self'))">
-      <img class="card-img-top" src="https://via.placeholder.com/1920x1080.png/064242/fff" alt="Card image cap">
+      <img class="card-img-top" width="400" height="171.43" src="https://via.placeholder.com/1920x1080.png/064242/fff" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>
         <p class="card-text">Ejemplo de descripcion del curso</p>
@@ -91,7 +91,7 @@ else {
 
 
     <div class="card" id="cardDestacados" onclick="(window.open('../index.php', '_self'))">
-      <img class="card-img-top" src="https://via.placeholder.com/1920x1080.png/cb7fc7/fff" alt="Card image cap">
+      <img class="card-img-top" width="400" height="171.43" src="https://via.placeholder.com/1920x1080.png/cb7fc7/fff" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>
         <p class="card-text">Ejemplo de descripcion del curso</p>
@@ -100,7 +100,7 @@ else {
     </div>
 
     <div class="card" id="cardDestacados" onclick="(window.open('../index.php', '_self'))">
-      <img class="card-img-top" src="https://via.placeholder.com/1920x1080.png/ff3300/fff" alt="Card image cap">
+      <img class="card-img-top" width="400" height="171.43" src="https://via.placeholder.com/1920x1080.png/ff3300/fff" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>
         <p class="card-text">Ejemplo de descripcion del curso</p>
@@ -109,7 +109,7 @@ else {
     </div>
 
     <div class="card" id="cardDestacados" onclick="(window.open('../index.php', '_self'))">
-      <img class="card-img-top" src="https://via.placeholder.com/1920x1080.png/99ff99/fff" alt="Card image cap">
+      <img class="card-img-top" width="400" height="171.43" src="https://via.placeholder.com/1920x1080.png/99ff99/fff" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>
         <p class="card-text">Ejemplo de descripcion del curso</p>
@@ -118,7 +118,7 @@ else {
     </div>
 
     <div class="card" id="cardDestacados" onclick="(window.open('../index.php', '_self'))">
-      <img class="card-img-top" src="https://via.placeholder.com/1920x1080.png/e085c2/fff" alt="Card image cap">
+      <img class="card-img-top" width="400" height="171.43" src="https://via.placeholder.com/1920x1080.png/e085c2/fff" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>
         <p class="card-text">Ejemplo de descripcion del curso</p>

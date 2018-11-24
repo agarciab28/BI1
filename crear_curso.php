@@ -14,11 +14,47 @@
       require 'db/auth_p.php';
       require 'paginas/navbar_profesionista.php';
     ?>
+
       <div class="formCurso">
-        <form class="curso" action="db/crear_curso.php" method="post">
-          <label for="file_upload" class="subir">Cambiar Thumbnail</label>
-          <input class="input_curso" id="file_upload" type='file' accept=".png, .jpg, .jpeg" style="display:none;"/>
-          <img id="imagen_curso" src="https://via.placeholder.com/1920x1080.png/99ff99/fff" alt="thumbnail" width=400>
+        <form class="curso" action="db/crear_curso.php" method="post" enctype="multipart/form-data">
+          <label for="image_upload" class="subir">Cambiar Thumbnail</label>
+          <input type='file' id="image_upload" name="image_upload" accept=".png, .jpg, .jpeg" style="display:none"/>
+
+          <div id="thumbnail_curso">
+            <img id="imagen_curso" src="https://via.placeholder.com/1920x1080.png/99ff99/fff" alt="thumbnail" width=400>
+          </div>
+
+          <script>
+          function readFile(input) {
+
+       if (input.files && input.files[0]) {
+         document.getElementById('thumbnail_curso').innerHTML='';
+           var reader = new FileReader();
+
+           reader.onload = function (e) {
+              var filePreview = document.createElement('img');
+               filePreview.style.width="400px";
+               filePreview.style.height="171.43px";
+               filePreview.id = 'imagen_curso';
+               filePreview.src = e.target.result;
+               // document.getElementById("thumbnail_curso").innerHTML = '<img id="imagen_curso" width="400" src="', e.target.result,'" title="', escape(theFile.name), '"/>';
+               console.log(e.target.result);
+
+               var previewZone = document.getElementById('thumbnail_curso');
+               previewZone.appendChild(filePreview);
+           }
+
+           reader.readAsDataURL(input.files[0]);
+       }
+   }
+
+   var fileUpload = document.getElementById('image_upload');
+   fileUpload.onchange = function (e) {
+       readFile(e.srcElement);
+   }
+     </script>
+
+          <!-- <img id="imagen_curso" src="https://via.placeholder.com/1920x1080.png/99ff99/fff" alt="thumbnail" width=400> -->
           <input class="input_curso" type="text" name="titulo_curso" id="titulo_curso" value="" placeholder="Título">
           <textarea class="input_curso" name="descripcion_curso" id="descripcion_curso" rows="8" cols="80" placeholder="Descripción del curso"></textarea>
           <select class="input_curso" name="categoria_curso" id="categoria_curso">
