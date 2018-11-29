@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Bienvendo a BI</title>
+    <title>Bienvendo Profesor</title>
     <title></title>
   </head>
   <body>
@@ -25,11 +25,8 @@
 
      ?>
     <div class="jumbotron" id="jumbo_reg">
-      <h1 class="display-4">¡Bienvenido a Belleza Interior!</h1>
-      <p class="lead">Ahora podrás comenzar a buscar cursos de tu interes en nuestras distintas categorías y aprender algo nuevo cada día.</p>
-      <hr class="my-4" style="background-color: white;">
-      <p>Recuerda verificar tu correo electronico</p>
-      <a href="../BI1/index.php" style="color: #6E828A; text-decoration: underline;">Regresar a la página de inicio</a>
+      <h1 class="display-4">Valores</h1>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
     <?php
 

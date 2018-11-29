@@ -55,7 +55,7 @@
         </div>
       </li>
       <li>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
         <input type="hidden" name="cmd" value="_s-xclick">
         <input type="hidden" name="hosted_button_id" value="8DU78KHDRTHM8">
         <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea.">

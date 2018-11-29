@@ -16,10 +16,9 @@
   <footer id="myFooter">
     <div class="container">
       <ul>
-        <li><a href="#">Item 1</a></li>
-        <li><a href="#">Item 2</a></li>
-        <li><a href="#">Item 3</a></li>
-        <li><a href="#">Item 4</a></li>
+        <li><a href="../BI1/mision.php">Misión</a></li>
+        <li><a href="../BI1/vision.php">Visión</a></li>
+        <li><a href="../BI1/valores.php">Valores</a></li>
       </ul>
       <p class="footer-copyright">© 2018 Belleza Interior</p>
     </div>

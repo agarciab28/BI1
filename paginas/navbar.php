@@ -26,19 +26,20 @@
         <li class="nav-item">
           <a class="nav-link" href="index.php">Inicio</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Item 2</a>
-        </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Item 3</a>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cursos</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Subitem 1</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Subitem 2</a>
+            <a class="dropdown-item" href="#">Psicología</a>
+            <a class="dropdown-item" href="#">Programación</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Item 4</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Quiénes Somos</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="mision.php">Misión</a>
+            <a class="dropdown-item" href="vision.php">Visión</a>
+            <a class="dropdown-item" href="valores.php">Valores</a>
+          </div>
         </li>
         <li>
           <form class="form-inline my-2 my-lg-0" action="../../BI1/resultados.php" method="post" >
