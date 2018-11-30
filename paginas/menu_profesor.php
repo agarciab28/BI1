@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
+<?php 
+include 'conexion.php';
+ ?>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +27,10 @@
                           </li>
                           <li class="nav-item">
                               <a class="nav-link pl-0" href="#">Informacion Personal</a>
+                          </li>
+                          <li>
+                            <li class="nav-item active">
+                              <a class="nav-link pl-0" href="../BI1/paginas/Citas.php" style="width:100%;">Agenda</a>
                           </li>
                           ..
                       </ul>
