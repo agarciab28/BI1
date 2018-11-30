@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div id="Formulario_Cita">
-		<form action="Registrar_cita.php" method="post" name="cita" id="cita">
+		<form action="..\db\Registrar_cita.php" method="Post" name="cita" id="cita">
 			<div id="campo">
 				<label for="Nombre">Nombre de Cliente:</label>
 				<input type="text" name="Nombre" id="Nombre" required>
