@@ -1,59 +1,59 @@
 <?php
+/**
+*@file registro.php
+*@Author Osvaldo SZ
+*@brief Código para el registro de un usuario
+*/
+  /**
+  *inclulle la coneccion
+  */
+  include ('conexion.php');
+  /**
+  *adquisicion de todos los campos
+  */
+  session_start();
+    $tam_video=$_FILES["video_upload"]["size"];
+    $nombre_video=$_FILES["video_upload"]["name"];
+    $ruta_video=$_FILES["video_upload"]["tmp_name"];
+    $tipo_video=$_FILES["video_upload"]["type"];
 
-include ("conexion.php");
 
-  if( isset ($_POST['subir'])){
+  $titulo=$_POST["titulo_entrada"];
+  $descripcion=$_POST["descripcion_entrada"];
+  $usuario=$_SESSION["profesionista"];
+  $id_curso=$_POST["id_curso"];
 
+  $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/BI1/uploads/imagenes/';
+  move_uploaded_file($ruta_video,$carpeta_destino.$nombre_video); //se sube la imagen al servidor
 
+  $archivo_objetivo=fopen($carpeta_destino . $nombre_vidoe, "r"); //abre flujo de archivos
+  $contenido=fread($archivo_objetivo, $tam_video); //lee los bytes de la imagen
+  $contenido=addslashes($contenido); //quita caracteres que no son reconocidos
+  fclose($archivo_objetivo); //cierra flujo de archivos
 
-    $usuario=$_POST['usuario'];
-    $curso=$_POST['curso'];
-    $tituloVideo=$_POST['titulo'];
-    $descripcion=$_POST['descripcion'];
+  /**
+  *Inserccion a la base de datos del curso creado por el profesor
+  *Con consulta para sacar el id de la categoria del curso con el nombre del curso con la variable $categoria
+  */
 
+  $sql = mysqli_query($con,"INSERT INTO entrada_curso VALUES (NULL,'$usuario', '$id_curso', '$titulo', '$descripcion', '$tipo_video')");
+  if ($sql) {
     /**
-    *recupera los datos del archivo(nombre y carpeta donde se almacena temporalmente)
+    * Manda al usuario a una pagina de confirmacion de la creacion del curso
     */
-    $nombre= $_FILES['videoCurso']['name'];
-    $temporal=$_FILES['videoCurso']['tmp_name'];
-    $folder='videoCursos';
-
-    /**
-    *Se mueve del folder temporal al folder de cursos
-    */
-    move_uploaded_file($temporal, $folder.'/'.$nombre);
-    /**
-    *extrae los bytes del archivo
-    */
-    $video= file_get_contents($folder.'/'.$nombre);
-
-    /**
-    *Inserccion a la base de datos del curso creado por el profesor
-    *Con consulta para sacar el id de la categoria del curso con el nombre del curso con la variable $categoria
-    */
-
-    $sql = mysqli_query($con,"INSERT INTO entrada_curso VALUES (NULL,'$usuario', (SELECT id_curso FROM cursos WHERE titulo='$curso'), '$tituloVideo', '$descripcion', $video)");
-
-    if ($sql) {
-      /**
-      * Manda al usuario a una pagina de confirmacion de la creacion del curso
-      */
-      $message = "Curso creado";
-      echo "<script type='text/javascript'>alert('$message');document.location='../upload.php'</script>";
+    $message = "El video se subio con exito";
+    echo "<script type='text/javascript'>alert('$message');document.location='../cursos_profe.php';</script>";
 
 
-    }
-
-    else {
-      /**
-      *notificacion de registro fallido
-      */
-      //$message ="Error al creara el curso";
-      //echo "<script type='text/javascript'>alert('$message');document.location='../upload.php'</script>";
-      echo mysqli_error($con);
-
-    }
   }
 
+  else {
+    /**
+    *notificacion de registro fallido
+    */
+    $message = mysqli_error($con);
+    echo "<script type='text/javascript'>alert('$message');</script>";
+  }
 
-?>
+  unlink('../uploads/imagenes/' . $nombre_video); //Borra imagen que se subio a la carpeta del servidor desde la computadora
+  ?>
