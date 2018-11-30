@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<?php 
-include 'conexion.php';
+<?php
+include 'db/conexion.php';
  ?>
 <head>
   <meta charset="utf-8">
@@ -9,11 +9,14 @@ include 'conexion.php';
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style_formulario.css">
   <title>Profesor</title>
 </head>
 
 <body>
-
+<?php
+$profesionista = $_GET["profesor"];
+ ?>
   <div class="container-fluid h-100">
       <div class="row h-100">
           <aside class="col-12 col-md-2 p-0" style="background-color:#6E828A;">
@@ -22,34 +25,26 @@ include 'conexion.php';
                   <img src="https://via.placeholder.com/1920x1080.png/143952/fff" alt="imagen_profesor" id="imagenProfesor">
                   <div class="collapse navbar-collapse">
                       <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
-                          <li class="nav-item active">
+                          <li class="nav-item" id="curriculum">
                               <a class="nav-link pl-0" href="#" style="width:100%;">Curriculum</a>
                           </li>
-                          <li class="nav-item">
+                          <li class="nav-item" id="info">
                               <a class="nav-link pl-0" href="#">Informacion Personal</a>
                           </li>
                           <li>
-                            <li class="nav-item active">
-                              <a class="nav-link pl-0" href="../BI1/paginas/Citas.php" style="width:100%;">Agenda</a>
+                            <li class="nav-item" id="agenda">
+                              <a class="nav-link pl-0" href="#" style="width:100%;">Agenda</a>
                           </li>
-                          ..
                       </ul>
                   </div>
               </nav>
           </aside>
-          <main class="col">
-            <div class="jumbotron" id="jumbo_prof">
-                <h1 class="display-4">Curriculum</h1>
-                <p class="lead">Ejemplo del contenido del curriculum
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <hr class="my-4" style="background-color: white;">
-                <p>Datos extra</p>
-                <p class="lead">
-
-                </p>
-            </div>
-          </main>
+          <div id="profesor" class="col-sm-10" ></div>
+          <div id="id_profesor" class="" style="display:none;">
+            <?php echo $profesionista ?>
+          </div>
       </div>
   </div>
+  <script src="../BI1/js/jquery-3.3.1.min.js"></script>
+  <script src="../BI1/js/menu_profesor.js"></script>
 </body>

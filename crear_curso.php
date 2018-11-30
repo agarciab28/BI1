@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style_crear_curso.css">
+    <link rel="stylesheet" href="css/style_formulario.css">
     <title>Crear Curso</title>
   </head>
   <body>

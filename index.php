@@ -25,6 +25,7 @@ else {
   require 'paginas/navbar.php';
 }
 
+
  ?>
 
   <!-- Carrusel -->
@@ -76,56 +77,27 @@ else {
   </div>
 
   <!-- cursos Destacados -->
-
   <div class="cursosDestacados">
     <h3 class="title">Cursos Destacados</h3>
+  <?php
+    include 'db/database.php';
+    $sql=mysqli_query($con,"SELECT * FROM cursos c INNER JOIN info_profesionista ip ON ip.usuario = c.profesionista");
+    while( $row = mysqli_fetch_assoc($sql) ) {
+  ?>
 
-    <div class="card" id="cardDestacados" onclick="(window.open('../index.php', '_self'))">
-      <img class="card-img-top" width="400" height="171.43" src="https://via.placeholder.com/1920x1080.png/064242/fff" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Titulo del curso</h5>
-        <p class="card-text">Ejemplo de descripcion del curso</p>
-        <a href="/BI1/profesor.php" class="card-link" style="color:#143952">Profesor</a>
-      </div>
-    </div>
-
-
-    <div class="card" id="cardDestacados" onclick="(window.open('../index.php', '_self'))">
-      <img class="card-img-top" width="400" height="171.43" src="https://via.placeholder.com/1920x1080.png/cb7fc7/fff" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Titulo del curso</h5>
-        <p class="card-text">Ejemplo de descripcion del curso</p>
-        <a href="/BI1/profesor.php" class="card-link" style="color:#143952">Profesor</a>
-      </div>
-    </div>
-
-    <div class="card" id="cardDestacados" onclick="(window.open('../index.php', '_self'))">
-      <img class="card-img-top" width="400" height="171.43" src="https://via.placeholder.com/1920x1080.png/ff3300/fff" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Titulo del curso</h5>
-        <p class="card-text">Ejemplo de descripcion del curso</p>
-        <a href="/BI1/profesor.php" class="card-link" style="color:#143952">Profesor</a>
-      </div>
-    </div>
-
-    <div class="card" id="cardDestacados" onclick="(window.open('../index.php', '_self'))">
-      <img class="card-img-top" width="400" height="171.43" src="https://via.placeholder.com/1920x1080.png/99ff99/fff" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Titulo del curso</h5>
-        <p class="card-text">Ejemplo de descripcion del curso</p>
-        <a href="/BI1/profesor.php" class="card-link" style="color:#143952">Profesor</a>
-      </div>
-    </div>
-
-    <div class="card" id="cardDestacados" onclick="(window.open('../index.php', '_self'))">
-      <img class="card-img-top" width="400" height="171.43" src="https://via.placeholder.com/1920x1080.png/e085c2/fff" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Titulo del curso</h5>
-        <p class="card-text">Ejemplo de descripcion del curso</p>
-        <a href="/BI1/profesor.php" class="card-link" style="color:#143952">Profesor</a>
-      </div>
+  <div class="card" id="cardDestacados" onclick="(window.open('<?php echo '../BI1/index.php' ?>', '_self'))">
+    <img class="card-img-top" width="400" height="171.43" src="https://via.placeholder.com/1920x1080.png/064242/fff" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><?php echo $row["titulo"]; ?></h5>
+      <p class="card-text"><?php echo $row["descripcion"]; ?></p>
+      <a href="<?php echo '../BI1/profesor.php?profesor=' . $row['profesionista'] ?>" class="card-link" style="color:#143952"><?php echo $row["nombre"] . " " . $row["apellidos"]; ?></a>
     </div>
   </div>
+
+  <?php } ?>
+  </div>
+
+
 
 <?php
   require_once 'paginas/footer.php';
