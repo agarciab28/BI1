@@ -85,7 +85,7 @@ else {
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>
         <p class="card-text">Ejemplo de descripcion del curso</p>
-        <a href="profesor.php" class="card-link" style="color:#143952">Profesor</a>
+        <a href="/BI1/profesor.php" class="card-link" style="color:#143952">Profesor</a>
       </div>
     </div>
 
@@ -95,7 +95,7 @@ else {
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>
         <p class="card-text">Ejemplo de descripcion del curso</p>
-        <a href="profesor.php" class="card-link" style="color:#143952">Profesor</a>
+        <a href="/BI1/profesor.php" class="card-link" style="color:#143952">Profesor</a>
       </div>
     </div>
 
@@ -104,7 +104,7 @@ else {
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>
         <p class="card-text">Ejemplo de descripcion del curso</p>
-        <a href="profesor.php" class="card-link" style="color:#143952">Profesor</a>
+        <a href="/BI1/profesor.php" class="card-link" style="color:#143952">Profesor</a>
       </div>
     </div>
 
@@ -113,7 +113,7 @@ else {
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>
         <p class="card-text">Ejemplo de descripcion del curso</p>
-        <a href="profesor.php" class="card-link" style="color:#143952">Profesor</a>
+        <a href="/BI1/profesor.php" class="card-link" style="color:#143952">Profesor</a>
       </div>
     </div>
 
@@ -122,7 +122,7 @@ else {
       <div class="card-body">
         <h5 class="card-title">Titulo del curso</h5>
         <p class="card-text">Ejemplo de descripcion del curso</p>
-        <a href="profesor.php" class="card-link" style="color:#143952">Profesor</a>
+        <a href="/BI1/profesor.php" class="card-link" style="color:#143952">Profesor</a>
       </div>
     </div>
   </div>
