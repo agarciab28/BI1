@@ -33,7 +33,7 @@
               include 'db/database.php';
               $sql=mysqli_query($con,"SELECT * FROM categorias_cursos");
               while( $row = mysqli_fetch_assoc($sql) ) { ?>
-                <a class="dropdown-item" href="#"><?php echo $row['categoria'] ?></a>
+                <a class="dropdown-item" href="<?php echo '../BI1/pagina_cursos.php?categoria=' . $row['categoria'] ?>"><?php echo $row['categoria'] ?></a>
               <?php } ?>
           </div>
         </li>
@@ -47,8 +47,8 @@
         </li>
         <li>
           <form class="form-inline my-2 my-lg-0" action="../../BI1/resultados.php" method="post" >
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="buscar" id="buscar">
-            <button id="btnSearch" class="btn" type="submit">Search</button>
+            <input class="form-control mr-sm-2" type="search" placeholder="Busca cursos" aria-label="Search" name="buscar" id="buscar">
+            <button id="btnSearch" class="btn" type="submit">Buscar</button>
           </form>
         </li>
         <li class="nav-item">

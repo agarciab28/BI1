@@ -26,23 +26,28 @@
       <li class="nav-item">
         <a class="nav-link" href="index.php">Inicio</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Item 2</a>
-      </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Item 3</a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cursos</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Subitem 1</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Subitem 2</a>
+          <?php
+            include 'db/database.php';
+            $sql=mysqli_query($con,"SELECT * FROM categorias_cursos");
+            while( $row = mysqli_fetch_assoc($sql) ) { ?>
+              <a class="dropdown-item" href="<?php echo '../BI1/pagina_cursos.php?categoria=' . $row['categoria'] ?>"><?php echo $row['categoria'] ?></a>
+            <?php } ?>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Item 4</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Quiénes Somos</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="mision.php">Misión</a>
+          <a class="dropdown-item" href="vision.php">Visión</a>
+          <a class="dropdown-item" href="valores.php">Valores</a>
+        </div>
       </li>
       <li>
         <form class="form-inline my-2 my-lg-0" action="../BI1/resultados.php" method="post" >
-          <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" name="buscar" id="buscar">
+          <input class="form-control mr-sm-2" type="search" placeholder="Busca cursos" aria-label="Search" name="buscar" id="buscar">
           <button id="btnSearch" class="btn" type="submit">Buscar</button>
         </form>
       </li>
