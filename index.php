@@ -86,7 +86,7 @@ else {
   ?>
 
   <div class="card" id="cardDestacados" onclick="(window.open('<?php echo '../BI1/index.php' ?>', '_self'))">
-    <img class="card-img-top" width="400" height="171.43" src="https://via.placeholder.com/1920x1080.png/064242/fff" alt="Card image cap">
+    <?php echo "<img alt='Card image cap' width='400' height='171.43' class='card-img-top' src='data:" . $row['tipo_thumbnail'] . "; base64," . base64_encode($row['thumbnail'])  . "'>"; ?>
     <div class="card-body">
       <h5 class="card-title"><?php echo $row["titulo"]; ?></h5>
       <p class="card-text"><?php echo $row["descripcion"]; ?></p>

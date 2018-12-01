@@ -58,7 +58,13 @@
           <input class="input_curso" type="text" name="titulo_curso" id="titulo_curso" value="" placeholder="Título">
           <textarea class="input_curso" name="descripcion_curso" id="descripcion_curso" rows="8" cols="80" placeholder="Descripción del curso"></textarea>
           <select class="input_curso" name="categoria_curso" id="categoria_curso">
-            <option value="prueba">Prueba</option>
+            <?php
+              include 'db/database.php';
+              $sql=mysqli_query($con,"SELECT * FROM categorias_cursos");
+              while( $row = mysqli_fetch_assoc($sql) ) { ?>
+                <option value="<?php echo $row['categoria'] ?>"><?php echo $row['categoria'] ?></option>
+              <?php } ?>
+
           </select>
           <input class="input_curso" type="submit" name="" value="Cofirmar">
         </form>

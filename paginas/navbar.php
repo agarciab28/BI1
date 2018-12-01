@@ -29,8 +29,12 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cursos</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Psicología</a>
-            <a class="dropdown-item" href="#">Programación</a>
+            <?php
+              include 'db/database.php';
+              $sql=mysqli_query($con,"SELECT * FROM categorias_cursos");
+              while( $row = mysqli_fetch_assoc($sql) ) { ?>
+                <a class="dropdown-item" href="#"><?php echo $row['categoria'] ?></a>
+              <?php } ?>
           </div>
         </li>
         <li class="nav-item dropdown">
