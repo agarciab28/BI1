@@ -37,7 +37,7 @@
           ?>
           <article class="search-result row">
       			<div class="col-xs-12 col-sm-12 col-md-3">
-      				<a href="#" class="thumbnail"><img class="thumbnail" src="https://via.placeholder.com/1920x1080.png/064242/fff" alt="<?php echo $row["titulo"]; ?>" /></a>
+      				<a href="#" class="thumbnail"><?php echo "<img alt='Card image cap' width='400' height='171.43' class='card-img-top' src='data:" . $row['tipo_thumbnail'] . "; base64," . base64_encode($row['thumbnail'])  . "'>"; ?></a>
       			</div>
       			<div class="col-xs-12 col-sm-12 col-md-2">
       				<ul class="meta-search">

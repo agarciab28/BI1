@@ -26,7 +26,7 @@
      ?>
     <div class="jumbotron" id="jumbo_reg">
       <h1 class="display-4">Valores</h1>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="lead">Los valores de Brillo Interior son trabajo, crecimiento, responsabilidad social, tener como prioridad ofrecer máxima calidad al cliente, trasparencia y honestidad.</p>
     </div>
     <?php
 

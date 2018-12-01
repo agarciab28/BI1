@@ -165,7 +165,7 @@ body {
   text-align: justify;
 }
 
-input[type='text'], input[type='email'], input[type='password'], input[type='date'], select, textarea {
+input[type='text'], input[type='email'], input[type='password'], input[type='date'], input[type='time'] select, textarea {
   width: 100%;
   border-radius: 8px;
   border: 3px solid #143952;

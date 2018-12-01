@@ -52,6 +52,7 @@
           <a class="dropdown-item" href="#">Mi Cuenta</a>
           <a class="dropdown-item" href="../BI1/cursos_profe.php">Mis Cursos</a>
           <a class="dropdown-item" href="../BI1/crear_curso.php">Crear Curso</a>
+          <a class="dropdown-item" href="../BI1/agenda.php">Crear Cita</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="db/logout.php">Cerrar Sesion</a>
         </div>
