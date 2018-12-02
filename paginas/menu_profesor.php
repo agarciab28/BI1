@@ -21,7 +21,14 @@ $profesionista = $_GET["profesor"];
       <div class="row h-100">
           <aside class="col-12 col-md-2 p-0" style="background-color:#6E828A;">
               <nav class="navbar navbar-expand navbar-dark flex-md-column flex-row align-items-start" style="background-color:#6E828A;">
-                  <h1 style="color:white; width:100%; height:100%;">Profesor</h1>
+                  <h1 style="color:white; width:100%; height:100%;">
+                    <?php
+                    $sql=mysqli_query($con,"SELECT * FROM info_profesionista WHERE usuario = '$profesionista'");
+                    while( $row = mysqli_fetch_assoc($sql) ) {
+                      echo $row['usuario'];
+                    }
+                    ?>
+                  </h1>
                   <img src="https://via.placeholder.com/1920x1080.png/143952/fff" alt="imagen_profesor" id="imagenProfesor">
                   <div class="collapse navbar-collapse">
                       <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
