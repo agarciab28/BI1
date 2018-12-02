@@ -92,6 +92,10 @@ else {
       <p class="card-text"><?php echo $row["descripcion"]; ?></p>
       <a href="<?php echo '../BI1/profesor.php?profesor=' . $row['profesionista'] ?>" class="card-link" style="color:#143952"><?php echo $row["nombre"] . " " . $row["apellidos"]; ?></a>
     </div>
+    <!-- Contador -->
+    <div id="sfceyqb12wtl2yrywnslnyst4r8es9wgqej"></div>
+    <script type="text/javascript" src="https://counter5.wheredoyoucomefrom.ovh/private/counter.js?c=eyqb12wtl2yrywnslnyst4r8es9wgqej&down=async" async></script>
+    <br></noscript>
   </div>
 
   <?php } ?>

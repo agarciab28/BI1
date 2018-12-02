@@ -9,7 +9,7 @@
 /**
 *@brief Conexión a la base de datos
 */
- $conn = mysqli_connect("localhost:3307","rootis","123456", "proyis");
+ $conn = mysqli_connect("localhost","rootis","123456", "proyis");
 
 /**
 Variables para almacenar los valores de los campos del formulario
