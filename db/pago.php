@@ -12,7 +12,7 @@
     * Manda al usuario a una pagina de confirmacion de la creacion del curso
     */
     $message = "Pago registrado";
-    echo "<script type='text/javascript'>alert('$message');document.location='../cursos_profe.php';</script>";
+    echo "<script type='text/javascript'>alert('$message');document.location='../index.php';</script>";
 
 
   }
