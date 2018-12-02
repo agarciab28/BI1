@@ -1,7 +1,7 @@
 <?php
 //Codigo para la validacion de usuario y contraseña
 $db='proyis';
-$con=mysqli_connect('localhost','rootis','123456',$db) or die('Problema con la conexion');
+$con=mysqli_connect('localhost:3307','rootis','123456',$db) or die('Problema con la conexion');
 $c=0;
 
 //Variables del usuario
