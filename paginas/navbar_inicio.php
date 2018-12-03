@@ -55,7 +55,7 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION["usuario"] ?></a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Mi Cuenta</a>
-          <a class="dropdown-item" href="#">Premium</a>
+          <a class="dropdown-item" href="../BI1/premium.php">Premium</a>
           <a class="dropdown-item" href="db/logout.php">Cerrar Sesion</a>
         </div>
       </li>
