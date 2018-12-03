@@ -85,7 +85,7 @@ else {
     while( $row = mysqli_fetch_assoc($sql) ) {
   ?>
 
-  <div class="card" id="cardDestacados" onclick="(window.open('<?php echo '../BI1/index.php' ?>', '_self'))">
+  <div class="card" id="cardDestacados" onclick="(window.open('<?php echo '../BI1/pagina_curso.php?curso='. $row['id_curso'] ?>', '_self'))">
     <?php echo "<img alt='Card image cap' width='400' height='171.43' class='card-img-top' src='data:" . $row['tipo_thumbnail'] . "; base64," . base64_encode($row['thumbnail'])  . "'>"; ?>
     <div class="card-body">
       <h5 class="card-title"><?php echo $row["titulo"]; ?></h5>

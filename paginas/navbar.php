@@ -101,7 +101,7 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <form class="login" action="../BI1/db/registro.php" method="post">
+          <form class="login" action="../BI1/prueba.php" method="post">
             <input type="text" name="txtNombre" id="txtNombre" value="" placeholder="Nombre">
             <input type="text" name="txtApellidos" id=txtApellidos value="" placeholder="Apellidos">
             <input type="text" name="txtUsuarioReg" id="txtUsuarioReg" value="" placeholder="Usuario">
