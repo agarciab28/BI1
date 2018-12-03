@@ -30,6 +30,7 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cursos</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <?php
+            session_start();
             include 'db/database.php';
             $sql=mysqli_query($con,"SELECT * FROM categorias_cursos");
             while( $row = mysqli_fetch_assoc($sql) ) { ?>
@@ -55,7 +56,13 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION["usuario"] ?></a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Mi Cuenta</a>
-          <a class="dropdown-item" href="../BI1/premium.php">Premium</a>
+          <?php
+          $usuario=$_SESSION['usuario'];
+          $sql=mysqli_query($con,"SELECT * FROM info_usuario WHERE usuario='$usuario'");
+          while( $row = mysqli_fetch_assoc($sql) ) {
+            if ($row['premium'] == '0') {?>
+              <a class="dropdown-item" href="../BI1/premium.php">Premium</a>
+          <?php } }?>
           <a class="dropdown-item" href="db/logout.php">Cerrar Sesion</a>
         </div>
       </li>
