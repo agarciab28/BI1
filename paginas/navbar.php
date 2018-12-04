@@ -144,7 +144,10 @@
             <input type="text" name="txtCurpProf" id="txtCurpProf" value="" placeholder="CURP">
             <input type="text" name="txtRFCProf" id="txtRfcProf" value="" placeholder="RFC">
             <textarea name="txtCurriculumProf" id="txtCurriculumProf" rows="5" placeholder="Ingresa tu curriculum"></textarea>
-            Agregar certificación: <input type="file" name="cdProf" id="CDProf">
+
+            <label id="btnArchivo"for="cdProf" class="" style="width:100%;">Agregar certificacion</label>
+            <input type='file' accept="application/pdf" name="cdProf" id="cdProf" style="display:none;">
+
             <input type="submit" name="btnIniciar" value="Registrate">
           </form>
         </div>

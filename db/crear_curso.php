@@ -36,7 +36,7 @@
   *Con consulta para sacar el id de la categoria del curso con el nombre del curso con la variable $categoria
   */
 
-  $sql = mysqli_query($con,"INSERT INTO cursos VALUES (NULL,'$curso', '$descripcion', '$usuario', (SELECT id_categoria FROM categorias_cursos WHERE categoria='$categoria'), '$contenido', '$tipo_imagen')");
+  $sql = mysqli_query($con,"INSERT INTO cursos VALUES (NULL,'$curso', '$descripcion', '$usuario', (SELECT id_categoria FROM categorias_cursos WHERE categoria='$categoria'), '$contenido', '$tipo_imagen', DEFAULT)");
   if ($sql) {
     /**
     * Manda al usuario a una pagina de confirmacion de la creacion del curso

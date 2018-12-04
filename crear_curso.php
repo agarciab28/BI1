@@ -17,7 +17,7 @@
 
       <div class="formCurso">
         <form class="curso" action="db/crear_curso.php" method="post" enctype="multipart/form-data">
-          <label for="image_upload" class="subir">Cambiar Thumbnail</label>
+          <label for="image_upload" class="subir" style="width:100%;">Cambiar Thumbnail</label>
           <input type='file' id="image_upload" name="image_upload" accept=".png, .jpg, .jpeg" style="display:none"/>
 
           <div id="thumbnail_curso">
@@ -66,7 +66,8 @@
               <?php } ?>
 
           </select>
-          <input class="input_curso" type="submit" name="" value="Cofirmar">
+          <br>
+          <input class="input_curso" type="submit" name="" value="Cofirmar" style="margin-left:30%;">
         </form>
       </div>
     <?php

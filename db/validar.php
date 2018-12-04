@@ -41,4 +41,16 @@ else if($c==0 ){
 echo "<script>alert('Usuario o contraseña incorrectas'); window.location = '../index.php'</script>";
 // header("Location: ../index.php");
 }
+
+//Validacion administrador
+$sql2= mysqli_query($con,"SELECT * FROM administrador where usuario = '$usuario' and clave='$pass'");
+if ($row = mysqli_fetch_array($sql2)) {
+	session_start();
+	$_SESSION['admin'] = $usuario;
+ header("Location: ../admin.php");
+}
+else if($c==0 ){
+echo "<script>alert('Usuario o contraseña incorrectas'); window.location = '../index.php'</script>";
+// header("Location: ../index.php");
+}
  ?>

@@ -14,6 +14,7 @@
 
 <?php
 session_start();
+    include 'db/database.php';
 if(isset($_SESSION["usuario"])){
   require 'paginas/navbar_inicio.php';
 }
@@ -32,38 +33,57 @@ else {
   <div id="carrusel">
     <div id="carrusel-home" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
-        <li data-target="#carrusel-home" data-slide-to="0" class="active"></li>
-        <li data-target="#carrusel-home" data-slide-to="1"></li>
-        <li data-target="#carrusel-home" data-slide-to="2"></li>
+        <li data-target="#carrusel-home" class="active" data-slide-to="1000"></li>
+        <?php
+        $sql=mysqli_query($con,"SELECT * FROM noticias");
+        while( $row = mysqli_fetch_assoc($sql) ) {
+      ?>
+        <li data-target="#carrusel-home" data-slide-to="<?php echo $row['id_noticia']; ?>"></li>
+      <?php } ?>
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active ad1">
           <div class="carousel-caption">
             <div class="texto-cover">
-              <h3 style="text-align:center">Noticia 1</h3>
+              <h3 style="text-align:center">Bienvenido a Brillo Interior</h3>
               <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                 commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
           </div>
         </div>
-        <div class="carousel-item ad2">
-          <div class="carousel-caption">
-            <div class="texto-cover">
-              <h3 style="text-align:center">Noticia 2</h3>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
+
+        <?php
+        $sql=mysqli_query($con,"SELECT * FROM noticias");
+        while( $row = mysqli_fetch_assoc($sql) ) {
+      ?>
+      <div class="carousel-item ad1">
+        <div class="carousel-caption">
+          <div class="texto-cover">
+            <h3 style="text-align:center"><?php echo $row['titulo'] ?></h3>
+            <p class="lead"><?php echo $row['descripcion'] ?></p>
           </div>
         </div>
-        <div class="carousel-item ad3">
-          <div class="carousel-caption">
-            <div class="texto-cover">
-              <h3 style="text-align:center">Noticia 3</h3>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <?php } ?>
+
+          <!-- <div class="carousel-item ad2">
+            <div class="carousel-caption">
+              <div class="texto-cover">
+                <h3 style="text-align:center">Noticia 2</h3>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
             </div>
           </div>
-        </div>
+          <div class="carousel-item ad3">
+            <div class="carousel-caption">
+              <div class="texto-cover">
+                <h3 style="text-align:center">Noticia 3</h3>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+            </div>
+          </div> -->
       </div>
       <a class="carousel-control-prev" href="#carrusel-home" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -80,7 +100,6 @@ else {
   <div class="cursosDestacados">
     <h3 class="title">Cursos Destacados</h3>
   <?php
-    include 'db/database.php';
     $sql=mysqli_query($con,"SELECT * FROM cursos c INNER JOIN info_profesionista ip ON ip.usuario = c.profesionista");
     while( $row = mysqli_fetch_assoc($sql) ) {
   ?>
