@@ -4,6 +4,8 @@
     margin:0 auto;
     margin-top: 1em;
     margin-bottom: 1em;
+
+    align-items: center;
 }
 
 .curso{
@@ -21,7 +23,7 @@
     position: static;
 }
 
-.input_curso, .subir{
+.input_curso, .subir, {
   /* margin-top: 1em; */
   width: 100%;
 }

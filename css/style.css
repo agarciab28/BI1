@@ -188,8 +188,10 @@ input[type='submit'] {
   cursor: pointer;
 }
 
-input[type='submit']:hover {
+input[type='submit']:hover, .btn-link:hover {
   background-color: #6E898A;
+  color:white;
+  text-decoration: none;
 }
 
 #btnIngreso {
@@ -200,4 +202,12 @@ input[type='submit']:hover {
 #btnRegistro {
   margin-top: 10px;
   width: 90%;
+}
+
+.accordion{
+  margin:3em;
+}
+
+video{
+    width: 60%;
 }

@@ -85,13 +85,17 @@ else {
     while( $row = mysqli_fetch_assoc($sql) ) {
   ?>
 
-  <div class="card" id="cardDestacados" onclick="(window.open('<?php echo '../BI1/index.php' ?>', '_self'))">
+  <div class="card" id="cardDestacados" onclick="(window.open('<?php echo '../BI1/pagina_curso.php?curso='. $row['id_curso'] ?>', '_self'))">
     <?php echo "<img alt='Card image cap' width='400' height='171.43' class='card-img-top' src='data:" . $row['tipo_thumbnail'] . "; base64," . base64_encode($row['thumbnail'])  . "'>"; ?>
     <div class="card-body">
       <h5 class="card-title"><?php echo $row["titulo"]; ?></h5>
       <p class="card-text"><?php echo $row["descripcion"]; ?></p>
       <a href="<?php echo '../BI1/profesor.php?profesor=' . $row['profesionista'] ?>" class="card-link" style="color:#143952"><?php echo $row["nombre"] . " " . $row["apellidos"]; ?></a>
     </div>
+    <!-- Contador -->
+    <div id="sfceyqb12wtl2yrywnslnyst4r8es9wgqej"></div>
+    <script type="text/javascript" src="https://counter5.wheredoyoucomefrom.ovh/private/counter.js?c=eyqb12wtl2yrywnslnyst4r8es9wgqej&down=async" async></script>
+    <br></noscript>
   </div>
 
   <?php } ?>

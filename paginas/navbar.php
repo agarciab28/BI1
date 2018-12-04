@@ -33,7 +33,7 @@
               include 'db/database.php';
               $sql=mysqli_query($con,"SELECT * FROM categorias_cursos");
               while( $row = mysqli_fetch_assoc($sql) ) { ?>
-                <a class="dropdown-item" href="<?php echo '../BI1/pagina_cursos.php?categoria=' . $row['categoria'] ?>"><?php echo $row['categoria'] ?></a>
+                <a class="dropdown-item" href="<?php echo '../BI1/pagina_categoria.php?categoria=' . $row['categoria'] ?>"><?php echo $row['categoria'] ?></a>
               <?php } ?>
           </div>
         </li>
@@ -101,7 +101,7 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <form class="login" action="../BI1/db/registro.php" method="post">
+          <form class="login" action="../BI1/prueba.php" method="post">
             <input type="text" name="txtNombre" id="txtNombre" value="" placeholder="Nombre">
             <input type="text" name="txtApellidos" id=txtApellidos value="" placeholder="Apellidos">
             <input type="text" name="txtUsuarioReg" id="txtUsuarioReg" value="" placeholder="Usuario">
@@ -133,7 +133,7 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <form class="login" action="../BI1/db/registroprof.php" method="post">
+          <form class="login" action="../BI1/db/registroprof.php" method="post" enctype="multipart/form-data">
             <input type="text" name="txtNombreProf" id="txtNombreProf" value="" placeholder="Nombre">
             <input type="text" name="txtApellidosProf" id="txtApellidosProf" value="" placeholder="Apellidos">
             <input type="text" name="txtUsuarioProf" id="txtUsuarioProf" value="" placeholder="Usuario">
@@ -144,6 +144,7 @@
             <input type="text" name="txtCurpProf" id="txtCurpProf" value="" placeholder="CURP">
             <input type="text" name="txtRFCProf" id="txtRfcProf" value="" placeholder="RFC">
             <textarea name="txtCurriculumProf" id="txtCurriculumProf" rows="5" placeholder="Ingresa tu curriculum"></textarea>
+            Agregar certificación: <input type="file" name="cdProf" id="CDProf">
             <input type="submit" name="btnIniciar" value="Registrate">
           </form>
         </div>

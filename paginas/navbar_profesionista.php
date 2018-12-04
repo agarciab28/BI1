@@ -33,7 +33,11 @@
             include 'db/database.php';
             $sql=mysqli_query($con,"SELECT * FROM categorias_cursos");
             while( $row = mysqli_fetch_assoc($sql) ) { ?>
+<<<<<<< HEAD
               <a class="dropdown-item" href="<?php echo '../BI1/pagina_cursos.php?categoria=' . $row['descripcion'] ?>"><?php echo $row['descripcion'] ?></a>
+=======
+              <a class="dropdown-item" href="<?php echo '../BI1/pagina_categoria.php?categoria=' . $row['categoria'] ?>"><?php echo $row['categoria'] ?></a>
+>>>>>>> gh-pages
             <?php } ?>
         </div>
       </li>

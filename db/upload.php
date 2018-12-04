@@ -35,7 +35,7 @@
   *Inserccion a la base de datos del curso creado por el profesor
   *Con consulta para sacar el id de la categoria del curso con el nombre del curso con la variable $categoria
   */
-  echo "$usuario,$id_curso, $titulo, $descripcion" ;
+  echo "$usuario, $titulo, $descripcion" ;
 
   $sql = mysqli_query($con,"INSERT INTO entrada_curso VALUES (NULL,'$usuario', '$id_curso', '$titulo', '$descripcion', '$contenido')");
   if ($sql) {
@@ -43,7 +43,8 @@
     * Manda al usuario a una pagina de confirmacion de la creacion del curso
     */
     $message = "El video se subio con exito";
-    echo "<script type='text/javascript'>alert('$message');document.location='../cursos_profe.php';</script>";
+    echo "<script type='text/javascript'>alert('$message');</script>";
+    // document.location='../cursos_profe.php';
 
 
   }

@@ -39,8 +39,9 @@ include ('conexion.php');
     /**
     *notificacion de registro fallido
     */
-    $message = "Usuario ya existente";
-    echo "<script type='text/javascript'>alert('$message');document.location='../index.php'</script>";
+    $message = mysqli_error($con);
+    echo mysqli_error($con);
+    // document.location='../index.php'</script>
     /**
     *echo "<script type='text/javascript'>alert('No fue posible el registro');window.location = '../index.php';</script>";
     */
