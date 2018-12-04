@@ -53,6 +53,8 @@
 
 </div>
 
+<input type="hidden" id="id_curso" name="" value="<?php echo $curso ?>">
+
      <?php
        require_once 'paginas/footer.php';
      ?>
@@ -60,4 +62,5 @@
   <!-- Scripts -->
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/contador.js"></script>
 </html>
