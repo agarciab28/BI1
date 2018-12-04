@@ -6,6 +6,9 @@
   </head>
   <body>
     <?php
+    /**
+    *Obtiene el nombre del profesor
+    */
       $profesionista = $_GET["profesor"];
      ?>
 
@@ -19,7 +22,13 @@
   			</thead>
   		<?php
       include '../db/database.php';
+      /**
+      *Sentencia para obtener las citas de la base de datos filtrandolas por el nombre del profesionista
+      */
       $sql=mysqli_query($con,"SELECT * FROM agenda WHERE profesionista = '$profesionista'");
+      /**
+      *Imprime la agenda de acuerdo al profesor que pertenezca el perfil
+      */
   		while ($row=mysqli_fetch_array($sql)) {
   			echo '<tr>';
   			echo '<td>'.$row["usuario"].' </td>';
