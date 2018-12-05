@@ -33,11 +33,7 @@
             include 'db/database.php';
             $sql=mysqli_query($con,"SELECT * FROM categorias_cursos");
             while( $row = mysqli_fetch_assoc($sql) ) { ?>
-<<<<<<< HEAD
-              <a class="dropdown-item" href="<?php echo '../BI1/pagina_cursos.php?categoria=' . $row['descripcion'] ?>"><?php echo $row['descripcion'] ?></a>
-=======
               <a class="dropdown-item" href="<?php echo '../BI1/pagina_categoria.php?categoria=' . $row['categoria'] ?>"><?php echo $row['categoria'] ?></a>
->>>>>>> gh-pages
             <?php } ?>
         </div>
       </li>
@@ -56,9 +52,8 @@
         </form>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION["profesionista"] ?></a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo 'Profesor '.$_SESSION["profesionista"] ?></a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Mi Cuenta</a>
           <a class="dropdown-item" href="../BI1/cursos_profe.php">Mis Cursos</a>
           <a class="dropdown-item" href="../BI1/crear_curso.php">Crear Curso</a>
           <a class="dropdown-item" href="../BI1/agenda.php">Crear Cita</a>

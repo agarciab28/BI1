@@ -23,7 +23,7 @@
       }
      ?>
 
-  <div class="accordion">
+  <div id="accordion" class="accordion">
 
 
     <?php
@@ -41,11 +41,14 @@
           </button>
         </h5>
       </div>
-      <div id="<?php echo 'entrada' . $record['id_entrada'] ?>" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div id="<?php echo 'entrada' . $record['id_entrada'] ?>" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
         <div class="card-body" style="display: flex; align-items: center;">
           <video src="../BI1/uploads/videos/pokemon.mp4" controls ></video> <br>
-          <?php echo $record['descripcion'] ?>
+          <div class="jumbotron" id="jumbo_reg" style="background-color:#6E828A; margin-left:1em;">
+            <h1 class="display-4">Descripción</h1>
+            <p class="lead"><?php echo $record['descripcion'] ?></p>
         </div>
+      </div>
       </div>
       </div>
 

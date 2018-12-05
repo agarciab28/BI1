@@ -11,23 +11,16 @@
   /**
   *adquisicion de todos los campos
   */
-  $id_curso=$_POST['id_curso'];
+  $id_noticia=$_POST['id_noticia'];
 
 
-  $sql = mysqli_query($con,"DELETE FROM cursos WHERE id_curso = $id_curso");
+  $sql = mysqli_query($con,"DELETE FROM noticias WHERE id_noticia = $id_noticia");
   if ($sql) {
     /**
     * Manda al usuario a una pagina de confirmacion de la creacion del curso
     */
-    if (isset($_SESSION["profesionista"])) {
       $message = "Eliminacion realizada";
-      echo "<script type='text/javascript'>alert('$message');document.location='../cursos_profe.php';</script>";
-    }
-    else {
-      $message = "Eliminacion realizada";
-      echo "<script type='text/javascript'>alert('$message');document.location='../cursos_admin.php';</script>";
-
-    }
+      echo "<script type='text/javascript'>alert('$message');document.location='../noticias_admin.php';</script>";
 
 
   }

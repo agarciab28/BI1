@@ -25,8 +25,6 @@ else if (isset($_SESSION["profesionista"])) {
 else {
   require 'paginas/navbar.php';
 }
-
-
  ?>
 
   <!-- Carrusel -->

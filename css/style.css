@@ -42,15 +42,7 @@ body {
 }
 
 .ad1 {
-  background: url(https://via.placeholder.com/1920x1080.png/0000FF/fff) no-repeat center center fixed;
-}
-
-.ad2 {
-  background: url(https://via.placeholder.com/1920x1080.png/FF0000/fff) no-repeat center center fixed;
-}
-
-.ad3 {
-  background: url(https://via.placeholder.com/1920x1080.png/008000/fff) no-repeat center center fixed;
+  background: url('../img/placeholder.jpg') no-repeat center center fixed;
 }
 
 .title {

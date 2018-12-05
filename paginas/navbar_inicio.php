@@ -30,7 +30,6 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cursos</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <?php
-            session_start();
             include 'db/database.php';
             $sql=mysqli_query($con,"SELECT * FROM categorias_cursos");
             while( $row = mysqli_fetch_assoc($sql) ) { ?>
@@ -53,9 +52,8 @@
         </form>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION["usuario"] ?></a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo 'Usuario '.$_SESSION["usuario"] ?></a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Mi Cuenta</a>
           <?php
           $usuario=$_SESSION['usuario'];
           $sql=mysqli_query($con,"SELECT * FROM info_usuario WHERE usuario='$usuario'");

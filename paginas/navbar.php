@@ -60,9 +60,6 @@
         <li class="nav-item">
           <a href="#" class="nav-link" data-toggle="modal" data-target="#registerModal">Registrarse</a>
         </li>
-        <li class="nav-item">
-          <a href="../BI1/access_all.html" class="nav-link">Pruebas</a>
-        </li>
       </ul>
     </div>
     <!-- <div id="navbar-menu-right-side"> -->
@@ -83,8 +80,8 @@
         </div>
         <div class="modal-body">
                 <form class="login" action="../BI1/db/validar.php" method="post">
-                  <input type="text" name="txtUsuario" id="txtUsuario" value="" placeholder="Usuario">
-                  <input type="password" name="txtPassword" id="txtPassword" value="" placeholder="Contraseña">
+                  <input type="text" name="txtUsuario" id="txtUsuario" value="" placeholder="Usuario" required>
+                  <input type="password" name="txtPassword" id="txtPassword" value="" placeholder="Contraseña" required>
                   <input type="submit" name="btnIniciar" value="Iniciar Sesión">
                 </form>
         </div>
@@ -102,22 +99,22 @@
         </div>
         <div class="modal-body">
           <form class="login" action="../BI1/prueba.php" method="post">
-            <input type="text" name="txtNombre" id="txtNombre" value="" placeholder="Nombre">
-            <input type="text" name="txtApellidos" id=txtApellidos value="" placeholder="Apellidos">
-            <input type="text" name="txtUsuarioReg" id="txtUsuarioReg" value="" placeholder="Usuario">
-            <input type="email" name="txtCorreo" id="txtCorreo" value="" placeholder="Correo electronico">
-            <input type="password" name="txtPasswordReg" id="txtPasswordReg" value="" placeholder="Contraseña">
-            <input type="text" name="txtFechaNac" id="txtFechaNac" value="" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Fecha de Nacimiento">
-            <select class="" name="txtNivelEst" id="txtNivelEst">
+            <input type="text" name="txtNombre" id="txtNombre" value="" placeholder="Nombre" required>
+            <input type="text" name="txtApellidos" id=txtApellidos value="" placeholder="Apellidos" required>
+            <input type="text" name="txtUsuarioReg" id="txtUsuarioReg" value="" placeholder="Usuario" required>
+            <input type="email" name="txtCorreo" id="txtCorreo" value="" placeholder="Correo electronico" required>
+            <input type="password" name="txtPasswordReg" id="txtPasswordReg" value="" placeholder="Contraseña" required>
+            <input type="text" name="txtFechaNac" id="txtFechaNac" value="" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Fecha de Nacimiento" required>
+            <select class="" name="txtNivelEst" id="txtNivelEst" required>
               <option value="null">Nivel de Estudios</option>
               <option value="secundaria">Secundaria</option>
               <option value="bachillerato">Bachillerato</option>
               <option value="licenciatura">Licenciatura</option>
               <option value="postgrado">Postgrado</option>
             </select>
-            <input type="text" name="txtCiudad" id="txtCiudad" value="" placeholder="Ciudad">
-            <input type="text" name="txtCurp" id="txtCurp" value="" placeholder="CURP">
-            <input type="submit" name="btnIniciar" value="Registrate">
+            <input type="text" name="txtCiudad" id="txtCiudad" value="" placeholder="Ciudad" required>
+            <input type="text" name="txtCurp" id="txtCurp" value="" placeholder="CURP" required>
+            <input type="submit" name="btnIniciar" value="Registrate" required>
           </form>
         </div>
       </div>
@@ -134,16 +131,16 @@
         </div>
         <div class="modal-body">
           <form class="login" action="../BI1/db/registroprof.php" method="post" enctype="multipart/form-data">
-            <input type="text" name="txtNombreProf" id="txtNombreProf" value="" placeholder="Nombre">
-            <input type="text" name="txtApellidosProf" id="txtApellidosProf" value="" placeholder="Apellidos">
-            <input type="text" name="txtUsuarioProf" id="txtUsuarioProf" value="" placeholder="Usuario">
-            <input type="email" name="txtCorreoProf" id="txtCorreoProf" value="" placeholder="Correo electronico">
-            <input type="password" name="txtPasswordProf" id="txtPasswordProf" value="" placeholder="Contraseña">
-            <input type="text" name="txtFechaNacProf" id="txtFechaNacProf" value="" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Fecha de Nacimiento">
-            <input type="text" name="txtCiudadProf" id="txtCiudadProf" value="" placeholder="Ciudad">
-            <input type="text" name="txtCurpProf" id="txtCurpProf" value="" placeholder="CURP">
-            <input type="text" name="txtRFCProf" id="txtRfcProf" value="" placeholder="RFC">
-            <textarea name="txtCurriculumProf" id="txtCurriculumProf" rows="5" placeholder="Ingresa tu curriculum"></textarea>
+            <input type="text" name="txtNombreProf" id="txtNombreProf" value="" placeholder="Nombre" required>
+            <input type="text" name="txtApellidosProf" id="txtApellidosProf" value="" placeholder="Apellidos" required>
+            <input type="text" name="txtUsuarioProf" id="txtUsuarioProf" value="" placeholder="Usuario" required>
+            <input type="email" name="txtCorreoProf" id="txtCorreoProf" value="" placeholder="Correo electronico" required>
+            <input type="password" name="txtPasswordProf" id="txtPasswordProf" value="" placeholder="Contraseña" required>
+            <input type="text" name="txtFechaNacProf" id="txtFechaNacProf" value="" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Fecha de Nacimiento" required>
+            <input type="text" name="txtCiudadProf" id="txtCiudadProf" value="" placeholder="Ciudad" required>
+            <input type="text" name="txtCurpProf" id="txtCurpProf" value="" placeholder="CURP" required>
+            <input type="text" name="txtRFCProf" id="txtRfcProf" value="" placeholder="RFC" required>
+            <textarea name="txtCurriculumProf" id="txtCurriculumProf" rows="5" placeholder="Ingresa tu curriculum" required></textarea>
 
             <label id="btnArchivo"for="cdProf" class="" style="width:100%;">Agregar certificacion</label>
             <input type='file' accept="application/pdf" name="cdProf" id="cdProf" style="display:none;">

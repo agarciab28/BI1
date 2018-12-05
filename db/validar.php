@@ -47,7 +47,7 @@ $sql2= mysqli_query($con,"SELECT * FROM administrador where usuario = '$usuario'
 if ($row = mysqli_fetch_array($sql2)) {
 	session_start();
 	$_SESSION['admin'] = $usuario;
- header("Location: ../admin.php");
+ header("Location: ../cursos_admin.php");
 }
 else if($c==0 ){
 echo "<script>alert('Usuario o contraseña incorrectas'); window.location = '../index.php'</script>";

@@ -25,7 +25,7 @@
 
      ?>
     <div class="jumbotron" id="jumbo_reg">
-      <h1 class="display-4">¡Bienvenido a Belleza Interior!</h1>
+      <h1 class="display-4">¡Bienvenido a Brillo Interior!</h1>
       <p class="lead">Ahora podrás comenzar a buscar cursos de tu interes en nuestras distintas categorías y aprender algo nuevo cada día.</p>
       <hr class="my-4" style="background-color: white;">
       <p>Recuerda verificar tu correo electronico</p>

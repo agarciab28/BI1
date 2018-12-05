@@ -42,9 +42,8 @@
     /**
     * Manda al usuario a una pagina de confirmacion de la creacion del curso
     */
-    $message = "El video se subio con exito";
-    echo "<script type='text/javascript'>alert('$message');</script>";
-    // document.location='../cursos_profe.php';
+    $message = mysqli_error($con);
+    echo "<script type='text/javascript'>alert('$message');document.location='../cursos_profe.php';</script>";
 
 
   }
@@ -54,7 +53,7 @@
     *notificacion de registro fallido
     */
     $message = mysqli_error($con);
-    echo "<script type='text/javascript'>alert('$message');</script>";
+    echo "<script type='text/javascript'>alert('$message');document.location='../cursos_profe.php';</script>";
   }
 
   unlink('../uploads/imagenes/' . $nombre_video); //Borra imagen que se subio a la carpeta del servidor desde la computadora

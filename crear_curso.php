@@ -18,7 +18,7 @@
       <div class="formCurso">
         <form class="curso" action="db/crear_curso.php" method="post" enctype="multipart/form-data">
           <label for="image_upload" class="subir" style="width:100%;">Cambiar Thumbnail</label>
-          <input type='file' id="image_upload" name="image_upload" accept=".png, .jpg, .jpeg" style="display:none"/>
+          <input required value="../BI1/img/placeholder.jpg" type='file' id="image_upload" name="image_upload" accept=".png, .jpg, .jpeg" style="display:none"/>
 
           <div id="thumbnail_curso">
             <img id="imagen_curso" src="https://via.placeholder.com/1920x1080.png/99ff99/fff" alt="thumbnail" width=400>
@@ -55,9 +55,9 @@
      </script>
 
           <!-- <img id="imagen_curso" src="https://via.placeholder.com/1920x1080.png/99ff99/fff" alt="thumbnail" width=400> -->
-          <input class="input_curso" type="text" name="titulo_curso" id="titulo_curso" value="" placeholder="Título">
-          <textarea class="input_curso" name="descripcion_curso" id="descripcion_curso" rows="8" cols="80" placeholder="Descripción del curso"></textarea>
-          <select class="input_curso" name="categoria_curso" id="categoria_curso">
+          <input required class="input_curso" type="text" name="titulo_curso" id="titulo_curso" value="" placeholder="Título">
+          <textarea required class="input_curso" name="descripcion_curso" id="descripcion_curso" rows="8" cols="80" placeholder="Descripción del curso"></textarea>
+          <select required class="input_curso" name="categoria_curso" id="categoria_curso">
             <?php
               include 'db/database.php';
               $sql=mysqli_query($con,"SELECT * FROM categorias_cursos");

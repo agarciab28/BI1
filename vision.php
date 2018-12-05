@@ -29,8 +29,8 @@
       <p class="lead">Ser una empresa líder que se mantiene a la vanguardia entregando a los usuarios contenido de calidad en el área de desarrollo personal, al mismo tiempo que conecta a la persona con el profesionista adecuado.</p>
     </div>
     <?php
-
-    require_once 'paginas/footer.php'; ?>
+    require_once 'paginas/footer.php';
+    ?>
   </body>
   <!-- Scripts -->
   <script src="js/jquery-3.3.1.min.js"></script>
