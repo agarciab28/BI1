@@ -11,7 +11,7 @@
   </head>
   <body>
     <?php
-    session_start();
+    require 'db/auth_u.php';
     require 'paginas/navbar_inicio.php';
 
      ?>
