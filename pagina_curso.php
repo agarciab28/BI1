@@ -30,6 +30,7 @@
       require('db/database.php');
       $sql = "SELECT * FROM entrada_curso WHERE curso='$curso'";
       $resultset = mysqli_query($con, $sql) or die("database error:". mysqli_error($con));
+      if(mysqli_num_rows($resultset) > 0){
         while( $record = mysqli_fetch_assoc($resultset) ) {
       ?>
 
@@ -43,7 +44,7 @@
       </div>
       <div id="<?php echo 'entrada' . $record['id_entrada'] ?>" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
         <div class="card-body" style="display: flex; align-items: center;">
-          <video src="../BI1/uploads/videos/pokemon.mp4" controls ></video> <br>
+          <video src="<?php echo '../BI1/uploads/videos/' . $record['video'] ?>" controls ></video> <br>
           <div class="jumbotron" id="jumbo_reg" style="background-color:#6E828A; margin-left:1em;">
             <h1 class="display-4">Descripción</h1>
             <p class="lead"><?php echo $record['descripcion'] ?></p>
@@ -52,7 +53,12 @@
       </div>
       </div>
 
-      <?php }?>
+      <?php }
+              }
+            else {
+              require 'paginas/sinentradas.php';
+            }
+      ?>
 
 </div>
 

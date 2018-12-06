@@ -20,10 +20,10 @@
     <div class="formCurso">
       <form class="curso" action="db/upload.php" method="post" enctype="multipart/form-data">
         <label for="video_upload" class="subir" style="width:100%;">Eligir Video</label>
-        <input type='file' id="video_upload" name="video_upload" accept="video/mp4, video/x-m4v, video/*" style="display:none"/>
-        <input class="input_curso" type="text" name="titulo_entrada" id="titulo_entrada" value="" placeholder="Título">
-        <textarea class="input_curso" name="descripcion_entrada" id="descripcion_entrada" rows="8" cols="80" placeholder="Descripción de la entrada"></textarea>
-        <input  type="hidden" name="id_curso" value="<?php echo $id_curso; ?>">
+        <input required type='file' id="video_upload" name="video_upload" accept="video/mp4, video/x-m4v, video/*" style="display:none"/>
+        <input required class="input_curso" type="text" name="titulo_entrada" id="titulo_entrada" value="" placeholder="Título">
+        <textarea required class="input_curso" name="descripcion_entrada" id="descripcion_entrada" rows="8" cols="80" placeholder="Descripción de la entrada"></textarea>
+        <input required type="hidden" name="id_curso" id="id_curso" value="<?php echo $id_curso; ?>">
         <input class="input_curso" type="submit" name="" value="Agregar Entrada" style="margin-left:30%;">
       </form>
     </div>

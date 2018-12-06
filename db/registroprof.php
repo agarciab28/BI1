@@ -26,15 +26,12 @@ $rfc = $_POST["txtRFCProf"];
 $curriculum = $_POST["txtCurriculumProf"];
 
 $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/BI1/uploads/';
-$ruta = $carpeta_destino.$_FILES['cdProf']['name'];
+$ruta = $_FILES['cdProf']['tmp_name'];
+$nombre_archivo=$_FILES["cdProf"]["name"];
 
-if(move_uploaded_file($_FILES['cdProf']['tmp_name'], $ruta)){
-}
-else {
-  $ruta = '';
-}
+move_uploaded_file($ruta,$carpeta_destino.$nombre_archivo);
 
-$insertar = "INSERT INTO info_profesionista VALUES ('$usuario', '$clave', '$nombre', '$apellidos', '$correo', '$fechanac', '', '$ciudad', '$curp', DEFAULT, '$curriculum', '$rfc', '$ruta')";
+$insertar = "INSERT INTO info_profesionista VALUES ('$usuario', '$clave', '$nombre', '$apellidos', '$correo', '$fechanac', '', '$ciudad', '$curp', DEFAULT, '$curriculum', '$rfc', '$nombre_archivo', DEFAULT)";
 
 $resultado = mysqli_query($conn, $insertar);
   if(!$resultado){

@@ -33,7 +33,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Validar Archivos</a>
+        <a class="nav-link" href="../BI1/archivos_admin.php">Validar Archivos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="db/logout.php">Cerrar Sesión</a>
