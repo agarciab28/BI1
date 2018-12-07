@@ -12,7 +12,7 @@
  $conn = mysqli_connect("localhost","rootis","123456", "proyis");
 
 /**
-Variables para almacenar los valores de los campos del formulario
+*Variables para almacenar los valores de los campos del formulario
 */
 $nombre = $_POST["txtNombreProf"];
 $apellidos = $_POST["txtApellidosProf"];
@@ -24,7 +24,9 @@ $ciudad = $_POST["txtCiudadProf"];
 $curp = $_POST["txtCurpProf"];
 $rfc = $_POST["txtRFCProf"];
 $curriculum = $_POST["txtCurriculumProf"];
-
+/**
+*mueve de la carpeta del servidor a la carpeta de destino
+*/
 $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/BI1/uploads/';
 $ruta = $_FILES['cdProf']['tmp_name'];
 $nombre_archivo=$_FILES["cdProf"]["name"];
@@ -38,13 +40,16 @@ $resultado = mysqli_query($conn, $insertar);
 echo "Error al registrarse";
   echo mysqli_error($conn);
   }else{
+    /**
+    *Redirije que al usuario a la pagina de registro exitoso
+    */
 header("Location: ../registro_exitoso_p.php");
 echo "Nombre: <i><a href=\"".$carpeta_destino.$nombrefinal."\">".$_FILES['cdProf']['name']."</a></i><br>";
 }
 
 
 /**
-Instrucción para la inserción de la información en la base de datos
+*Instrucción para la inserción de la información en la base de datos
 */
 
 
@@ -56,6 +61,6 @@ Instrucción para la inserción de la información en la base de datos
 
 
 /**
-Cerrar conexión de la base de datos
+*Cerrar conexión de la base de datos
 */
 mysqli_close($conn);

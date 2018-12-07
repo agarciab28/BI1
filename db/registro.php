@@ -29,7 +29,10 @@ include ('conexion.php');
   $sql = mysqli_query($con,"INSERT INTO info_usuario VALUES ('$usuario', '$pass', '$nombre', '$apellidos', '$correoElectronico', '$fechaNacimiento', '$estudios', '$ciudad', '$curp', 1, 0)");
 
   if ($sql) {
-    // Manda al usuario a una pagina de confirmacion de registro
+    /*
+    * Manda al usuario a una pagina de confirmacion de registro
+    */
+
     header("Location: ../registro_exitoso_u.php");
 
 

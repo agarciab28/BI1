@@ -1,4 +1,7 @@
 <?php
+/**
+*codigo para validar los archivos mandados por el profecionista pertenesen al cursos_admin
+*/
   include ('conexion.php');
 
   $valor = $_POST['group2'];

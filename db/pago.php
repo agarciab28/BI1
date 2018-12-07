@@ -1,5 +1,9 @@
 <?php
-
+/**
+*@file registro.php
+*@Author Osvaldo SZ
+*@brief Código para el registro de un usuario
+*/
   include ('conexion.php');
 
   $pago=$_GET["pago"];

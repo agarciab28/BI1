@@ -1,4 +1,7 @@
 <?php
+/**
+*Codigo para contar las visitas a la pagina
+*/
   include ('conexion.php');
   $curso = $_POST['id_curso'];
   $sql1 = mysqli_query($con,"SELECT visitas FROM cursos WHERE id_curso = '$curso'");

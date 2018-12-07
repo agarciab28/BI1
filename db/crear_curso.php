@@ -24,12 +24,12 @@
   $categoria=$_POST["categoria_curso"];
 
   $carpeta_destino=$_SERVER['DOCUMENT_ROOT'].'/BI1/uploads/imagenes/';
-  move_uploaded_file($ruta_imagen,$carpeta_destino.$nombre_imagen); //se sube la imagen al servidor
-
-  $archivo_objetivo=fopen($carpeta_destino . $nombre_imagen, "r"); //abre flujo de archivos
-  $contenido=fread($archivo_objetivo, $tam_imagen); //lee los bytes de la imagen
-  $contenido=addslashes($contenido); //quita caracteres que no son reconocidos
-  fclose($archivo_objetivo); //cierra flujo de archivos
+  move_uploaded_file($ruta_imagen,$carpeta_destino.$nombre_imagen); /***se sube la imagen al servidor*/
+  $archivo_objetivo=fopen($carpeta_destino . $nombre_imagen, "r");
+   /***abre flujo de archivos*/
+  $contenido=fread($archivo_objetivo, $tam_imagen); /***lee los bytes de la imagen*/
+  $contenido=addslashes($contenido); /***quita caracteres que no son reconocidos*/
+  fclose($archivo_objetivo); /***cierra flujo de archivos*/
 
   /**
   *Inserccion a la base de datos del curso creado por el profesor
@@ -56,5 +56,5 @@
     echo mysqli_error($con);
   }
 
-  unlink('../uploads/imagenes/' . $nombre_imagen); //Borra imagen que se subio a la carpeta del servidor desde la computadora
+  unlink('../uploads/imagenes/' . $nombre_imagen); /***Borra imagen que se subio a la carpeta del servidor desde la computadora*/
   ?>

@@ -1,9 +1,4 @@
 <?php
-/**
-*@file registro.php
-*@Author Osvaldo SZ
-*@brief Código para el registro de un usuario
-*/
   /**
   *inclulle la coneccion
   */
