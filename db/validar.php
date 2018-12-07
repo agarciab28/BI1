@@ -1,19 +1,27 @@
 <?php
-//Codigo para la validacion de usuario y contraseña
+/**
+*@file validar.php
+*@Author Juan José Martínez Paniagua
+*@brief Código para validar a los usuarios
+*/
+
 $db='proyis';
 $con=mysqli_connect('localhost','rootis','123456',$db) or die('Problema con la conexion');
 $c=0;
 
-//Variables del usuario
+/** Variables del usuario
+*/
 $usuario=$_POST['txtUsuario'];
 $pass=md5($_POST['txtPassword']);
-//Validar contenido en las variables o cajas de texto
+/**Validar contenido en las variables o cajas de texto
+*/
 if(empty($usuario)|empty($pass))
 {
 	header("Location: ../index.php");
 	exit();
 }
-//Validacion Existencia del usuario
+/** Validacion Existencia del usuario
+*/
 $sql = mysqli_query($con,"SELECT * FROM info_usuario where usuario = '$usuario' and clave='$pass'");
 
 if ($row = mysqli_fetch_array($sql)) {
@@ -30,7 +38,8 @@ else
 	$c=1;
 }
 
-//Validacion Profesionista
+/** Validacion Profesionista
+*/
 $sql2= mysqli_query($con,"SELECT * FROM info_profesionista where usuario = '$usuario' and clave='$pass'");
 if ($row = mysqli_fetch_array($sql2)) {
 	session_start();
@@ -42,7 +51,8 @@ echo "<script>alert('Usuario o contraseña incorrectas'); window.location = '../
 // header("Location: ../index.php");
 }
 
-//Validacion administrador
+/** Validacion administrador
+*/
 $sql2= mysqli_query($con,"SELECT * FROM administrador where usuario = '$usuario' and clave='$pass'");
 if ($row = mysqli_fetch_array($sql2)) {
 	session_start();
