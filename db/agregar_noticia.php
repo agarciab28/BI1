@@ -1,5 +1,7 @@
 <?php
-
+/**
+*Codigo para agregar la noticia
+*/
   include ('conexion.php');
 
   session_start();
