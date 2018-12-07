@@ -1,6 +1,6 @@
 <?php
 /**
-*@file registro.php
+*@file pago.php
 *@Author Osvaldo SZ
 *@brief Código para el registro de un usuario
 */

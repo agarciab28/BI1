@@ -1,6 +1,6 @@
 <?php
 /**
-*@file registro.php
+*@file eliminar_curso.php
 *@Author Osvaldo SZ
 *@brief Código para el registro de un usuario
 */
